@@ -34,10 +34,19 @@ class OnBoardingVC: UIViewController {
     
     @IBAction func nextPage(_ sender: UIButton){
         slideShow.setCurrentPage(slideShow.currentPage + 1, animated: true)
+        if slideShow.currentPage == 3 {
+            closeOnBoarding()
+        }
     }
     
     @IBAction func skipPage(_ sender: UIButton){
-        //TODO
+        closeOnBoarding()
+    }
+    
+    private func closeOnBoarding(){
+        UserDefaults.standard.set(true, forKey: "showOnboarding")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PayWallVC") as! PayWallVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

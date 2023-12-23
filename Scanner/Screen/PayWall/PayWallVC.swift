@@ -11,8 +11,38 @@ class PayWallVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        configUI()
+    }
+    
+    private func configUI(){
+        let colorTop =  UIColor(red: 13.0/255.0, green: 76.0/255.0, blue: 146.0/255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 63.0/255.0, green: 153.0/255.0, blue: 174.0/255.0, alpha: 1.0).cgColor
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.frame = self.view.bounds
+        
+        self.view.layer.insertSublayer(gradientLayer, at:0)
+    }
+    
+    @IBAction func closeAction(_ sender: UIButton){
+        
+    }
+    
+    @IBAction func restore(_ sender: UIButton){
+        
+    }
+    
+    @IBAction func subScribe(_ sender: UIButton){
+        
+    }
+    
+    @IBAction func termOfUse(_ sender: UIButton){
+        
     }
 
+    @IBAction func privacyPolicy(_ sender: UIButton){
+        
+    }
 }
