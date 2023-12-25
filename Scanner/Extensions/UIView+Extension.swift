@@ -16,3 +16,21 @@ extension UIView {
     }
     
 }
+
+extension UIButton {
+    
+    func underLine(text: String){
+        
+        let yourAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 16),
+            .foregroundColor: UIColor.white,
+            .underlineStyle: NSUnderlineStyle.single.rawValue
+        ]
+        
+        let attributeString = NSMutableAttributedString(
+            string: text,
+            attributes: yourAttributes
+        )
+        self.setAttributedTitle(attributeString, for: .normal)
+    }
+}

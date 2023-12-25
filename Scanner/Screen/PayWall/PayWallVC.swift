@@ -8,6 +8,9 @@
 import UIKit
 
 class PayWallVC: UIViewController {
+    
+    @IBOutlet weak var termofUseButton: UIButton!
+    @IBOutlet weak var privacePolicyButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,9 @@ class PayWallVC: UIViewController {
         gradientLayer.frame = self.view.bounds
         
         self.view.layer.insertSublayer(gradientLayer, at:0)
+        
+        termofUseButton.underLine(text: "Term of use")
+        privacePolicyButton.underLine(text: "Privacy policy")
     }
     
     @IBAction func closeAction(_ sender: UIButton){

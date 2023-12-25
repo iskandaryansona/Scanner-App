@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func presentMain() {
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainVC = storyboard.instantiateViewController(withIdentifier: "PayWallVC") as! PayWallVC
+        let mainVC = storyboard.instantiateViewController(withIdentifier: "AppTabBarController") as! AppTabBarController
         let navTabBar = UINavigationController.init(rootViewController: mainVC)
         navTabBar.setNavigationBarHidden(true, animated: false)
         self.window?.rootViewController = navTabBar

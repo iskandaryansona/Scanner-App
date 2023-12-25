@@ -16,6 +16,10 @@
 		E71AA9DB2B3388B700DD5FA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71AA9DA2B3388B700DD5FA1 /* Assets.xcassets */; };
 		E71AA9DE2B3388B700DD5FA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71AA9DC2B3388B700DD5FA1 /* LaunchScreen.storyboard */; };
 		E72FF3242B371D8D002E04F1 /* PayWallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72FF3232B371D8D002E04F1 /* PayWallVC.swift */; };
+		E76272CD2B39EB6B008189C3 /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76272CC2B39EB6B008189C3 /* AppTabBarController.swift */; };
+		E76272D02B39EF0B008189C3 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76272CF2B39EF0B008189C3 /* HistoryVC.swift */; };
+		E76272D32B39EF9A008189C3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76272D22B39EF9A008189C3 /* SettingsVC.swift */; };
+		E76272D52B3A017A008189C3 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76272D42B3A017A008189C3 /* ScanVC.swift */; };
 		E7CDBDC62B34E0E90093096A /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CDBDC52B34E0E90093096A /* OnBoardingVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,10 @@
 		E71AA9DD2B3388B700DD5FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E71AA9DF2B3388B700DD5FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72FF3232B371D8D002E04F1 /* PayWallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallVC.swift; sourceTree = "<group>"; };
+		E76272CC2B39EB6B008189C3 /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
+		E76272CF2B39EF0B008189C3 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		E76272D22B39EF9A008189C3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		E76272D42B3A017A008189C3 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
 		E7CDBDC52B34E0E90093096A /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,9 +123,21 @@
 			path = PayWall;
 			sourceTree = "<group>";
 		};
+		E76272CB2B39EB5B008189C3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E76272CF2B39EF0B008189C3 /* HistoryVC.swift */,
+				E76272CC2B39EB6B008189C3 /* AppTabBarController.swift */,
+				E76272D22B39EF9A008189C3 /* SettingsVC.swift */,
+				E76272D42B3A017A008189C3 /* ScanVC.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		E7CDBDC32B34E0C80093096A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				E76272CB2B39EB5B008189C3 /* TabBar */,
 				E72FF3222B371ABC002E04F1 /* PayWall */,
 				E7CDBDC42B34E0D50093096A /* OnBoarding */,
 			);
@@ -248,11 +268,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E71AA9D62B3388B500DD5FA1 /* ViewController.swift in Sources */,
+				E76272D52B3A017A008189C3 /* ScanVC.swift in Sources */,
 				E7CDBDC62B34E0E90093096A /* OnBoardingVC.swift in Sources */,
+				E76272CD2B39EB6B008189C3 /* AppTabBarController.swift in Sources */,
 				E71AA9D22B3388B500DD5FA1 /* AppDelegate.swift in Sources */,
 				E72FF3242B371D8D002E04F1 /* PayWallVC.swift in Sources */,
+				E76272D02B39EF0B008189C3 /* HistoryVC.swift in Sources */,
 				E703A2782B35B1B100617F9A /* UIView+Extension.swift in Sources */,
 				E71AA9D42B3388B500DD5FA1 /* SceneDelegate.swift in Sources */,
+				E76272D32B39EF9A008189C3 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
