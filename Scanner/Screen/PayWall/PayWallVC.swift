@@ -33,7 +33,9 @@ class PayWallVC: UIViewController {
     }
     
     @IBAction func closeAction(_ sender: UIButton){
-        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AppTabBarController") as! AppTabBarController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func restore(_ sender: UIButton){
