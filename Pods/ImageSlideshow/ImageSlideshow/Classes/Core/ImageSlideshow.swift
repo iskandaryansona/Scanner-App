@@ -459,7 +459,7 @@ open class ImageSlideshow: UIView {
                 return Int(images.count) - 1
             } else if page == scrollViewImages.count - 1 {
                 // last page contains the first image
-                return scrollViewImages.count - 1
+                return 0
             } else {
                 return page - 1
             }

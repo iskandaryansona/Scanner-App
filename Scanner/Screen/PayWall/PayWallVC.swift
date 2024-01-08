@@ -28,8 +28,8 @@ class PayWallVC: UIViewController {
         
         self.view.layer.insertSublayer(gradientLayer, at:0)
         
-        termofUseButton.underLine(text: "Term of use")
-        privacePolicyButton.underLine(text: "Privacy policy")
+//        termofUseButton.underLine(text: "Term of use")
+//        privacePolicyButton.underLine(text: "Privacy policy")
     }
     
     @IBAction func closeAction(_ sender: UIButton){

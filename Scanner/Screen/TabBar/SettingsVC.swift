@@ -9,8 +9,10 @@ import UIKit
 
 class SettingsVC: UIViewController {
     
-    var imgArr:[String] = ["menu.camera","menu.gallery","menu.drive","menu.url","menu.convert"]
+    var imgArr:[String] = ["settings.premium","settings.feedback","settings.rate","settings.share","settings.privacy"]
 
+    @IBOutlet weak var settingsCollection: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,14 +32,21 @@ class SettingsVC: UIViewController {
 
 }
 
-extension SettingsVC: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+extension SettingsVC: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imgArr.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath as IndexPath) as! MenuCell
+        cell.configUI(imgName: imgArr[indexPath.row])
+        return cell
     }
-    
-    
+        
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let vc = PayWallVC()
+            self.present(vc, animated: true)
+        }
+    }
 }

@@ -11,7 +11,7 @@ class ScanVC: UIViewController {
     
     @IBOutlet weak var menuCollection: UICollectionView!
     
-    var imgArr:[String] = ["menu.camera","menu.gallery","menu.drive","menu.url","menu.convert"]
+    var imgArr:[String] = ["menu.camera","menu.gallery","menu.drive","menu.convert"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class ScanVC: UIViewController {
 
 extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return imgArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -31,6 +31,5 @@ extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.configUI(imgName: imgArr[indexPath.row])
         return cell
     }
-    
     
 }

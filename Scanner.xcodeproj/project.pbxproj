@@ -21,6 +21,7 @@
 		E76272D02B39EF0B008189C3 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76272CF2B39EF0B008189C3 /* HistoryVC.swift */; };
 		E76272D32B39EF9A008189C3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76272D22B39EF9A008189C3 /* SettingsVC.swift */; };
 		E76272D52B3A017A008189C3 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76272D42B3A017A008189C3 /* ScanVC.swift */; };
+		E79B7FE62B4C7021004CAAF0 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B7FE52B4C7021004CAAF0 /* SettingsCell.swift */; };
 		E7CDBDC62B34E0E90093096A /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CDBDC52B34E0E90093096A /* OnBoardingVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		E76272CF2B39EF0B008189C3 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		E76272D22B39EF9A008189C3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		E76272D42B3A017A008189C3 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
+		E79B7FE52B4C7021004CAAF0 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		E7CDBDC52B34E0E90093096A /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 				E76272D22B39EF9A008189C3 /* SettingsVC.swift */,
 				E76272D42B3A017A008189C3 /* ScanVC.swift */,
 				E750A0342B489A1B0067E00D /* MenuCell.swift */,
+				E79B7FE52B4C7021004CAAF0 /* SettingsCell.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				E71AA9D62B3388B500DD5FA1 /* ViewController.swift in Sources */,
 				E76272D52B3A017A008189C3 /* ScanVC.swift in Sources */,
+				E79B7FE62B4C7021004CAAF0 /* SettingsCell.swift in Sources */,
 				E7CDBDC62B34E0E90093096A /* OnBoardingVC.swift in Sources */,
 				E76272CD2B39EB6B008189C3 /* AppTabBarController.swift in Sources */,
 				E71AA9D22B3388B500DD5FA1 /* AppDelegate.swift in Sources */,
