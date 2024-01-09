@@ -1,21 +1,36 @@
 //
-//  PayWallVC.swift
+//  PaywallViewController.swift
 //  Scanner
 //
-//  Created by Sona on 23.12.23.
+//  Created by Petros Gabrielyan on 09.01.24.
 //
 
 import UIKit
 
-class PayWallVC: UIViewController {
-    
-    @IBOutlet weak var termofUseButton: UIButton!
+enum PaywallFrom {
+    case onboarding
+    case main
+}
+
+class PaywallViewController: UIViewController {
+
+    @IBOutlet weak var termsOfUseButton: UIButton!
     @IBOutlet weak var privacePolicyButton: UIButton!
+    
+    let from: PaywallFrom?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configUI()
+    }
+    
+    init(from: PaywallFrom) {
+        self.from = from
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func configUI(){
@@ -28,14 +43,18 @@ class PayWallVC: UIViewController {
         
         self.view.layer.insertSublayer(gradientLayer, at:0)
         
-//        termofUseButton.underLine(text: "Term of use")
-//        privacePolicyButton.underLine(text: "Privacy policy")
+        termsOfUseButton.underLine(text: "Term of use")
+        privacePolicyButton.underLine(text: "Privacy policy")
     }
     
     @IBAction func closeAction(_ sender: UIButton){
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AppTabBarController") as! AppTabBarController
-        self.navigationController?.pushViewController(vc, animated: true)
+        if from == .onboarding {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AppTabBarController") as! AppTabBarController
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            self.dismiss(animated: true)
+        }
     }
     
     @IBAction func restore(_ sender: UIButton){
@@ -53,4 +72,5 @@ class PayWallVC: UIViewController {
     @IBAction func privacyPolicy(_ sender: UIButton){
         
     }
+
 }

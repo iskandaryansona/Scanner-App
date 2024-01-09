@@ -45,7 +45,7 @@ class OnBoardingVC: UIViewController {
     
     private func closeOnBoarding(){
         UserDefaults.standard.set(true, forKey: "showOnboarding")
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PayWallVC") as! PayWallVC
+        let vc = PaywallViewController(from: .onboarding)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

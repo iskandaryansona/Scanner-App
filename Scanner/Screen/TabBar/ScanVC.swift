@@ -21,7 +21,7 @@ class ScanVC: UIViewController {
 
 }
 
-extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imgArr.count
     }
@@ -33,9 +33,37 @@ extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.item == 0 {
+        switch indexPath.item {
+        case 0:
             let vc = CameraViewController()
             self.navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            let vc = UIImagePickerController()
+            vc.sourceType = .photoLibrary
+            vc.delegate = self
+            vc.allowsEditing = false
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+        default:
+            return
         }
+    }
+}
+
+extension ScanVC: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let url = info[UIImagePickerController.InfoKey.imageURL] as! NSURL
+        let name = url.lastPathComponent!
+
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            let img = image.fixedOrientation()
+        }
+        
+        picker.dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
     }
 }

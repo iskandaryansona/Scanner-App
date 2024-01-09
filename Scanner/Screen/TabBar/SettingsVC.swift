@@ -45,7 +45,8 @@ extension SettingsVC: UICollectionViewDelegate, UICollectionViewDataSource{
         
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let vc = PayWallVC()
+            let vc = PaywallViewController(from: .main)
+            vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
         }
     }
