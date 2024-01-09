@@ -32,4 +32,10 @@ extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.item == 0 {
+            let vc = CameraViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
