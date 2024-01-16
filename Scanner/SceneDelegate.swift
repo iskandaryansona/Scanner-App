@@ -20,11 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let showOnboarding =  UserDefaults.standard.bool(forKey: "showOnboarding")
         
-//        if !showOnboarding {
+        if !showOnboarding {
             presentOnboarding()
-//        } else {
-//            presentMain()
-//        }
+        } else {
+            presentMain()
+        }
     }
     
     func presentMain() {

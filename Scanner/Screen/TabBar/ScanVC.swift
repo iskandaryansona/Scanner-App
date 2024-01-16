@@ -11,7 +11,7 @@ class ScanVC: UIViewController {
     
     @IBOutlet weak var menuCollection: UICollectionView!
     
-    var imgArr:[String] = ["menu.camera","menu.gallery","menu.drive","menu.convert"]
+    var imgArr:[String] = ["menu.camera","menu.gallery","menu.drive"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
