@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditViewController" customModule="Scanner" customModuleProvider="target">
             <connections>
+                <outlet property="convertButton" destination="laS-fg-kiH" id="eIQ-dq-p92"/>
                 <outlet property="editImg" destination="lO9-pz-phH" id="oQC-6y-jis"/>
+                <outlet property="filterCollectionView" destination="qTu-cq-0lP" id="5it-hx-GLR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,16 +22,134 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lO9-pz-phH">
-                    <rect key="frame" x="18" y="257" width="359" height="402"/>
+                    <rect key="frame" x="-8" y="135" width="408" height="576"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qTu-cq-0lP">
+                    <rect key="frame" x="0.0" y="724" width="393" height="130"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5RM-35-df0">
+                        <size key="itemSize" width="80" height="110"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtb-Ow-Zra">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3a-9r-5WL">
+                            <rect key="frame" x="16" y="55" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="0gc-xx-pqY"/>
+                                <constraint firstAttribute="height" constant="40" id="R2k-2H-IQX"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="camera.back"/>
+                            <connections>
+                                <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="4VK-3b-AO2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t22-K3-dAQ">
+                            <rect key="frame" x="266" y="55" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="enZ-Ug-Wfr"/>
+                                <constraint firstAttribute="height" constant="40" id="wEp-ix-Jjr"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icon_save"/>
+                            <connections>
+                                <action selector="saveButtonAction:" destination="-1" eventType="touchUpInside" id="X4z-Qu-cTj"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKc-26-HAx">
+                            <rect key="frame" x="313" y="55" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="6mP-oN-Kdt"/>
+                                <constraint firstAttribute="height" constant="40" id="SFV-zx-UPG"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icon_share"/>
+                            <connections>
+                                <action selector="shareButtonAction:" destination="-1" eventType="touchUpInside" id="wSg-2M-5lF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laS-fg-kiH">
+                            <rect key="frame" x="148" y="62" width="96" height="26"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Convert">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="convertButtonAction:" destination="-1" eventType="touchUpInside" id="66S-RM-YJD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1450980392" green="0.1529411765" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="t22-K3-dAQ" secondAttribute="bottom" constant="25" id="2dp-8f-E72"/>
+                        <constraint firstItem="u3a-9r-5WL" firstAttribute="leading" secondItem="xtb-Ow-Zra" secondAttribute="leading" constant="16" id="AbH-gy-uG2"/>
+                        <constraint firstItem="BKc-26-HAx" firstAttribute="leading" secondItem="t22-K3-dAQ" secondAttribute="trailing" constant="7" id="ECx-NA-vn9"/>
+                        <constraint firstAttribute="height" constant="120" id="IpY-yl-dp5"/>
+                        <constraint firstAttribute="trailing" secondItem="BKc-26-HAx" secondAttribute="trailing" constant="40" id="MDd-VZ-qwf"/>
+                        <constraint firstAttribute="bottom" secondItem="u3a-9r-5WL" secondAttribute="bottom" constant="25" id="R9J-Z9-Mzz"/>
+                        <constraint firstAttribute="bottom" secondItem="BKc-26-HAx" secondAttribute="bottom" constant="25" id="T0a-QH-vuu"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9u-Sk-Evb">
+                    <rect key="frame" x="0.0" y="724" width="393" height="130"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJ2-eo-gdg">
+                            <rect key="frame" x="39" y="29" width="70" height="73"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="crop"/>
+                            <connections>
+                                <action selector="cropAction:" destination="-1" eventType="touchUpInside" id="iHY-IH-Ena"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXJ-Kf-soh">
+                            <rect key="frame" x="161" y="29" width="70" height="73"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="signature"/>
+                            <connections>
+                                <action selector="signatureAction:" destination="-1" eventType="touchUpInside" id="Iel-qX-B6v"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aub-Vm-6la">
+                            <rect key="frame" x="278" y="29" width="70" height="73"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="filter"/>
+                            <connections>
+                                <action selector="filterAction:" destination="-1" eventType="touchUpInside" id="m9k-VH-pTZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xtb-Ow-Zra" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2bR-4E-Fba"/>
+                <constraint firstItem="xtb-Ow-Zra" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="77s-Uq-4Fn"/>
+                <constraint firstItem="xtb-Ow-Zra" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DBx-99-fks"/>
+            </constraints>
             <point key="canvasLocation" x="-8.3969465648854964" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="camera.back" width="40" height="40"/>
+        <image name="crop" width="70" height="73"/>
+        <image name="filter" width="70" height="67"/>
+        <image name="icon_save" width="42" height="42"/>
+        <image name="icon_share" width="42" height="42"/>
+        <image name="signature" width="75.333335876464844" height="73"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
