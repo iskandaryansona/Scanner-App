@@ -28,6 +28,10 @@
 		E78188592B56A0EB00D90735 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78188572B56A0EB00D90735 /* FilterCell.xib */; };
 		E78188602B56BD5400D90735 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781885E2B56BD5400D90735 /* WebViewController.swift */; };
 		E78188612B56BD5400D90735 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E781885F2B56BD5400D90735 /* WebViewController.xib */; };
+		E78188692B56CD2900D90735 /* DrawSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78188672B56CD2900D90735 /* DrawSignatureViewController.swift */; };
+		E781886A2B56CD2900D90735 /* DrawSignatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78188682B56CD2900D90735 /* DrawSignatureViewController.xib */; };
+		E781886C2B56CF8300D90735 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781886B2B56CF8300D90735 /* DrawingView.swift */; };
+		E78188702B56D58B00D90735 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781886F2B56D58B00D90735 /* AppStoreReviewManager.swift */; };
 		E79B7FE62B4C7021004CAAF0 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B7FE52B4C7021004CAAF0 /* SettingsCell.swift */; };
 		E79B7FEA2B4D43EF004CAAF0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B7FE82B4D43EF004CAAF0 /* CameraViewController.swift */; };
 		E79B7FEB2B4D43EF004CAAF0 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E79B7FE92B4D43EF004CAAF0 /* CameraViewController.xib */; };
@@ -61,6 +65,10 @@
 		E78188572B56A0EB00D90735 /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FilterCell.xib; path = Scanner/Screen/Camera/FilterCell.xib; sourceTree = SOURCE_ROOT; };
 		E781885E2B56BD5400D90735 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = Scanner/WebViewController.swift; sourceTree = SOURCE_ROOT; };
 		E781885F2B56BD5400D90735 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebViewController.xib; path = Scanner/WebViewController.xib; sourceTree = SOURCE_ROOT; };
+		E78188672B56CD2900D90735 /* DrawSignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawSignatureViewController.swift; sourceTree = "<group>"; };
+		E78188682B56CD2900D90735 /* DrawSignatureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawSignatureViewController.xib; sourceTree = "<group>"; };
+		E781886B2B56CF8300D90735 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		E781886F2B56D58B00D90735 /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = SOURCE_ROOT; };
 		E79B7FE52B4C7021004CAAF0 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		E79B7FE82B4D43EF004CAAF0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		E79B7FE92B4D43EF004CAAF0 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
@@ -132,9 +140,11 @@
 			isa = PBXGroup;
 			children = (
 				E7CDBDC32B34E0C80093096A /* Screen */,
+				E78188622B56C8FD00D90735 /* Signature */,
 				E71AA9D12B3388B500DD5FA1 /* AppDelegate.swift */,
 				E71AA9D32B3388B500DD5FA1 /* SceneDelegate.swift */,
 				E71AA9D52B3388B500DD5FA1 /* ViewController.swift */,
+				E781886F2B56D58B00D90735 /* AppStoreReviewManager.swift */,
 				E703A2762B35B19D00617F9A /* Extensions */,
 				E71AA9D72B3388B500DD5FA1 /* Main.storyboard */,
 				E71AA9DA2B3388B700DD5FA1 /* Assets.xcassets */,
@@ -164,6 +174,16 @@
 				E79B7FE52B4C7021004CAAF0 /* SettingsCell.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E78188622B56C8FD00D90735 /* Signature */ = {
+			isa = PBXGroup;
+			children = (
+				E78188672B56CD2900D90735 /* DrawSignatureViewController.swift */,
+				E78188682B56CD2900D90735 /* DrawSignatureViewController.xib */,
+				E781886B2B56CF8300D90735 /* DrawingView.swift */,
+			);
+			path = Signature;
 			sourceTree = "<group>";
 		};
 		E79B7FE72B4D43BD004CAAF0 /* Camera */ = {
@@ -272,6 +292,7 @@
 				E79B7FFB2B4D68D8004CAAF0 /* PaywallViewController.xib in Resources */,
 				E78188612B56BD5400D90735 /* WebViewController.xib in Resources */,
 				E79B7FEB2B4D43EF004CAAF0 /* CameraViewController.xib in Resources */,
+				E781886A2B56CD2900D90735 /* DrawSignatureViewController.xib in Resources */,
 				E71AA9DB2B3388B700DD5FA1 /* Assets.xcassets in Resources */,
 				E71AA9D92B3388B500DD5FA1 /* Main.storyboard in Resources */,
 				E78188592B56A0EB00D90735 /* FilterCell.xib in Resources */,
@@ -334,7 +355,10 @@
 				E79B7FF12B4D5D0D004CAAF0 /* UIImage+Crop.swift in Sources */,
 				E7CDBDC62B34E0E90093096A /* OnBoardingVC.swift in Sources */,
 				E75557822B55B79600E455A4 /* EditViewController.swift in Sources */,
+				E78188692B56CD2900D90735 /* DrawSignatureViewController.swift in Sources */,
 				E79B7FEA2B4D43EF004CAAF0 /* CameraViewController.swift in Sources */,
+				E78188702B56D58B00D90735 /* AppStoreReviewManager.swift in Sources */,
+				E781886C2B56CF8300D90735 /* DrawingView.swift in Sources */,
 				E76272CD2B39EB6B008189C3 /* AppTabBarController.swift in Sources */,
 				E71AA9D22B3388B500DD5FA1 /* AppDelegate.swift in Sources */,
 				E750A0352B489A1B0067E00D /* MenuCell.swift in Sources */,
