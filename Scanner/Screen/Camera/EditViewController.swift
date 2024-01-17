@@ -239,9 +239,6 @@ class EditViewController: UIViewController {
         showShareSheet(sender: sender, file: data)
     }
     
-    @IBAction func xlsButtonAction(_ sender: Any) {
-    }
-    
     @IBAction func txtButtonAction(_ sender: Any) {
     }
     

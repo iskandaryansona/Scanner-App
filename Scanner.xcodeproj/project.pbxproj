@@ -38,6 +38,9 @@
 		E79B7FF12B4D5D0D004CAAF0 /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B7FF02B4D5D0D004CAAF0 /* UIImage+Crop.swift */; };
 		E79B7FFA2B4D68D8004CAAF0 /* PaywallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B7FF82B4D68D8004CAAF0 /* PaywallViewController.swift */; };
 		E79B7FFB2B4D68D8004CAAF0 /* PaywallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E79B7FF92B4D68D8004CAAF0 /* PaywallViewController.xib */; };
+		E7A68C972B5819000004A877 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A68C952B5819000004A877 /* HistoryCell.swift */; };
+		E7A68C982B5819000004A877 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A68C962B5819000004A877 /* HistoryCell.xib */; };
+		E7A68C9B2B581E860004A877 /* ScannerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7A68C992B581E860004A877 /* ScannerModel.xcdatamodeld */; };
 		E7CDBDC62B34E0E90093096A /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CDBDC52B34E0E90093096A /* OnBoardingVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +78,9 @@
 		E79B7FF02B4D5D0D004CAAF0 /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
 		E79B7FF82B4D68D8004CAAF0 /* PaywallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewController.swift; sourceTree = "<group>"; };
 		E79B7FF92B4D68D8004CAAF0 /* PaywallViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaywallViewController.xib; sourceTree = "<group>"; };
+		E7A68C952B5819000004A877 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryCell.swift; path = Scanner/Screen/TabBar/HistoryCell.swift; sourceTree = "<group>"; };
+		E7A68C962B5819000004A877 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HistoryCell.xib; path = Scanner/Screen/TabBar/HistoryCell.xib; sourceTree = "<group>"; };
+		E7A68C9A2B581E860004A877 /* ScannerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScannerModel.xcdatamodel; sourceTree = "<group>"; };
 		E7CDBDC52B34E0E90093096A /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +127,8 @@
 		E71AA9C52B3388B500DD5FA1 = {
 			isa = PBXGroup;
 			children = (
+				E7A68C952B5819000004A877 /* HistoryCell.swift */,
+				E7A68C962B5819000004A877 /* HistoryCell.xib */,
 				E71AA9D02B3388B500DD5FA1 /* Scanner */,
 				E71AA9CF2B3388B500DD5FA1 /* Products */,
 				76C41876B04E59A1C0EFFA76 /* Pods */,
@@ -139,6 +147,7 @@
 		E71AA9D02B3388B500DD5FA1 /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				E7A68C992B581E860004A877 /* ScannerModel.xcdatamodeld */,
 				E7CDBDC32B34E0C80093096A /* Screen */,
 				E78188622B56C8FD00D90735 /* Signature */,
 				E71AA9D12B3388B500DD5FA1 /* AppDelegate.swift */,
@@ -287,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A68C982B5819000004A877 /* HistoryCell.xib in Resources */,
 				E75557832B55B79600E455A4 /* EditViewController.xib in Resources */,
 				E71AA9DE2B3388B700DD5FA1 /* LaunchScreen.storyboard in Resources */,
 				E79B7FFB2B4D68D8004CAAF0 /* PaywallViewController.xib in Resources */,
@@ -363,10 +373,12 @@
 				E71AA9D22B3388B500DD5FA1 /* AppDelegate.swift in Sources */,
 				E750A0352B489A1B0067E00D /* MenuCell.swift in Sources */,
 				E76272D02B39EF0B008189C3 /* HistoryVC.swift in Sources */,
+				E7A68C972B5819000004A877 /* HistoryCell.swift in Sources */,
 				E78188602B56BD5400D90735 /* WebViewController.swift in Sources */,
 				E703A2782B35B1B100617F9A /* UIView+Extension.swift in Sources */,
 				E71AA9D42B3388B500DD5FA1 /* SceneDelegate.swift in Sources */,
 				E76272D32B39EF9A008189C3 /* SettingsVC.swift in Sources */,
+				E7A68C9B2B581E860004A877 /* ScannerModel.xcdatamodeld in Sources */,
 				E79B7FFA2B4D68D8004CAAF0 /* PaywallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,6 +630,19 @@
 			productName = TOCropViewController;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		E7A68C992B581E860004A877 /* ScannerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E7A68C9A2B581E860004A877 /* ScannerModel.xcdatamodel */,
+			);
+			currentVersion = E7A68C9A2B581E860004A877 /* ScannerModel.xcdatamodel */;
+			path = ScannerModel.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E71AA9C62B3388B500DD5FA1 /* Project object */;
 }

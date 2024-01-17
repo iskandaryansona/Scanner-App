@@ -211,67 +211,17 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vgp-ox-6fF">
-                                <rect key="frame" x="0.0" y="177" width="393" height="452"/>
+                                <rect key="frame" x="0.0" y="177" width="393" height="675"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="18" minimumInteritemSpacing="10" id="gqe-lx-0QZ">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="18" minimumInteritemSpacing="10" id="gqe-lx-0QZ">
+                                    <size key="itemSize" width="340" height="100"/>
+                                    <size key="estimatedItemSize" width="340" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="feE-jQ-LvS" customClass="MenuCell" customModule="Scanner" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="0.0" width="165" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="84E-yy-cmd">
-                                            <rect key="frame" x="0.0" y="0.0" width="165" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hds-H5-aag">
-                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="100"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G8e-SA-fGS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="165" height="100"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="8"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="G8e-SA-fGS" secondAttribute="trailing" id="5EG-om-5Uc"/>
-                                                        <constraint firstItem="G8e-SA-fGS" firstAttribute="leading" secondItem="Hds-H5-aag" secondAttribute="leading" id="9UZ-Em-s8c"/>
-                                                        <constraint firstItem="G8e-SA-fGS" firstAttribute="top" secondItem="Hds-H5-aag" secondAttribute="top" id="E0L-CM-lpn"/>
-                                                        <constraint firstAttribute="bottom" secondItem="G8e-SA-fGS" secondAttribute="bottom" id="ghp-f7-dmv"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="8"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Hds-H5-aag" firstAttribute="leading" secondItem="84E-yy-cmd" secondAttribute="leading" id="QpJ-Rd-gIN"/>
-                                                <constraint firstAttribute="trailing" secondItem="Hds-H5-aag" secondAttribute="trailing" id="SGA-qB-Jc9"/>
-                                                <constraint firstAttribute="bottom" secondItem="Hds-H5-aag" secondAttribute="bottom" id="c7e-hO-L2G"/>
-                                                <constraint firstItem="Hds-H5-aag" firstAttribute="top" secondItem="84E-yy-cmd" secondAttribute="top" id="hyA-fi-pmq"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="8"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="165" height="100"/>
-                                        <connections>
-                                            <outlet property="iconImg" destination="G8e-SA-fGS" id="jKN-F9-FZs"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="ypP-qp-5kp" id="p3Y-nV-eCs"/>
                                     <outlet property="delegate" destination="ypP-qp-5kp" id="pnm-Vb-0zh"/>
@@ -279,13 +229,17 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tCS-qE-W9n"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="87c-B0-okK" firstAttribute="top" secondItem="bhg-b1-uCT" secondAttribute="top" constant="73" id="2mx-7u-ZM6"/>
                             <constraint firstItem="87c-B0-okK" firstAttribute="leading" secondItem="bhg-b1-uCT" secondAttribute="leading" constant="24" id="k5e-lu-Zpu"/>
                             <constraint firstAttribute="trailing" secondItem="87c-B0-okK" secondAttribute="trailing" constant="24" id="znQ-u7-8DM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="vgp-ox-6fF" id="HL0-ws-qOf"/>
+                        <outlet property="searchView" destination="87c-B0-okK" id="RId-qg-e0e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1W-ZQ-Udy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -410,9 +364,6 @@
         <image name="skip" width="40" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

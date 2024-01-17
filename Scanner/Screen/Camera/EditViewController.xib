@@ -205,23 +205,15 @@
                                     <rect key="frame" x="73.666666666666686" y="91.666666666666629" width="220" height="60"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JW-GB-PbJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="55" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="73.333333333333329" height="60"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="jpg_icon"/>
                                             <connections>
                                                 <action selector="jpgButtonAction:" destination="-1" eventType="touchUpInside" id="C6t-8Q-qu4"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzT-mU-WzX">
-                                            <rect key="frame" x="54.999999999999986" y="0.0" width="55" height="60"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="xls_icon"/>
-                                            <connections>
-                                                <action selector="xlsButtonAction:" destination="-1" eventType="touchUpInside" id="fw5-KI-6Xb"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxr-m1-vX5">
-                                            <rect key="frame" x="110" y="0.0" width="55" height="60"/>
+                                            <rect key="frame" x="73.333333333333343" y="0.0" width="73.333333333333343" height="60"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="txt_icon"/>
                                             <connections>
@@ -229,7 +221,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6y-q5-4eF">
-                                            <rect key="frame" x="165" y="0.0" width="55" height="60"/>
+                                            <rect key="frame" x="146.66666666666669" y="0.0" width="73.333333333333314" height="60"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="pdf_icon"/>
                                             <connections>
@@ -330,7 +322,6 @@
         <image name="pdf_icon" width="45" height="59"/>
         <image name="signature" width="75.333335876464844" height="73"/>
         <image name="txt_icon" width="50" height="59"/>
-        <image name="xls_icon" width="55" height="60"/>
         <image name="zip_icon" width="54" height="60"/>
     </resources>
 </document>
