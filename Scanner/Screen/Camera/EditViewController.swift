@@ -17,13 +17,23 @@ class EditViewController: UIViewController {
     @IBOutlet weak var filterCollectionView: UICollectionView!
     @IBOutlet weak var mainBottomBar: UIView!
     @IBOutlet weak var confirmationBottomBar: UIView!
+    @IBOutlet weak var convertView: UIView!
+    @IBOutlet weak var subConvertView: UIView!
+    @IBOutlet weak var convertCancelButton: UIButton!
+    @IBOutlet weak var filesButton: UIButton!
+    @IBOutlet weak var zipButton: UIButton!
+    @IBOutlet weak var docTypeStack: UIStackView!
+    @IBOutlet weak var zipTypeButton: UIButton!
     
     var move = true
     
     let borderWidth: CGFloat = 1
     let resizersWidth: CGFloat = 6
     let rotatersWidth: CGFloat = 16
-
+    
+    var typeActiveColor = UIColor(red: 29/255, green: 163/255, blue: 238/255, alpha: 1)
+    var typeInactiveColor = UIColor(red: 37/255, green: 39/255, blue: 45/255, alpha: 1)
+    
     var deltaX: CGFloat = 0
     var deltaY: CGFloat = 0
     var diff: CGFloat = .pi
@@ -40,13 +50,13 @@ class EditViewController: UIViewController {
     
     var img: UIImage?
     var originalImg = UIImage()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configUI()
         setupCollectionView()
-
+        
         movableImageView.layer.borderWidth = 1
         movableImageView.isHidden = true
         
@@ -65,7 +75,7 @@ class EditViewController: UIViewController {
         
         self.movableView.addGestureRecognizer(pinchGesture)
         self.movableView.addGestureRecognizer(rotationGesture)
-
+        
     }
     
     @objc func handlePan(_ sender: UIPanGestureRecognizer) {
@@ -80,8 +90,8 @@ class EditViewController: UIViewController {
         } else if move {
             var center = movableView.center
             let translation = sender.translation(in:self.view)
-                    center = CGPoint(x:center.x + translation.x,
-                                         y:center.y + translation.y)
+            center = CGPoint(x:center.x + translation.x,
+                             y:center.y + translation.y)
             movableView.center = center
             sender.setTranslation(CGPoint.zero, in: sender.view)
         }
@@ -118,9 +128,28 @@ class EditViewController: UIViewController {
             editImg.image = img
             originalImg = img
         }
+        
+        subConvertView.layer.borderWidth = 1
+        subConvertView.layer.borderColor = UIColor(red: 123/255, green: 155/255, blue: 190/255, alpha: 1).cgColor
+        subConvertView.layer.cornerRadius = 14
+        
         convertButton.layer.borderWidth = 1
-        convertButton.layer.borderColor = UIColor(red: 123/255, green: 155/255, blue: 130/255, alpha: 1).cgColor
-        convertButton.cornerRadius = 14
+        convertButton.layer.borderColor = UIColor(red: 123/255, green: 155/255, blue: 190/255, alpha: 1).cgColor
+        convertButton.layer.cornerRadius = 13
+        
+        filesButton.layer.borderWidth = 1
+        filesButton.layer.borderColor = UIColor(red: 123/255, green: 155/255, blue: 190/255, alpha: 1).cgColor
+        filesButton.layer.cornerRadius = 14
+        
+        zipButton.layer.borderWidth = 1
+        zipButton.layer.borderColor = UIColor(red: 123/255, green: 155/255, blue: 190/255, alpha: 1).cgColor
+        zipButton.layer.cornerRadius = 14
+        
+        convertCancelButton.layer.borderWidth = 1
+        convertCancelButton.layer.borderColor = UIColor(red: 123/255, green: 155/255, blue: 190/255, alpha: 1).cgColor
+        convertCancelButton.layer.cornerRadius = 16
+        
+        convertView.frame.origin.y = self.view.frame.height
         
     }
     
@@ -132,7 +161,7 @@ class EditViewController: UIViewController {
         
         self.filterCollectionView.frame.origin.y = self.view.frame.height
     }
-
+    
     @IBAction func saveSignAction(_ sender: Any) {
         hideConfirmationBar()
         movableImageView.layer.borderWidth = 0
@@ -167,24 +196,63 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func shareButtonAction(_ sender: Any) {
+        showShareSheet(sender: sender, file: img)
+    }
+    
+    func showShareSheet(sender: Any, file: Any) {
         let shareBtn = sender as! UIButton
-        let shareSheet = UIActivityViewController(activityItems: [img], applicationActivities: nil)
+        let shareSheet = UIActivityViewController(activityItems: [file], applicationActivities: nil)
         shareSheet.popoverPresentationController?.sourceView = self.view
         shareSheet.popoverPresentationController?.sourceRect = shareBtn.frame
         shareSheet.completionWithItemsHandler = { activity, success, items, error in
             // TODO save to history
+            self.hideConvertView()
         }
         present(shareSheet, animated: true)
     }
-    
     
     @IBAction func saveButtonAction(_ sender: Any) {
         // TODO save to history
     }
 
     @IBAction func convertButtonAction(_ sender: Any) {
-        
+        self.convertButton.isHidden = true
+        showConvertView()
     }
+    
+    @IBAction func filesButtonAction(_ sender: Any) {
+        filesButton.backgroundColor = typeActiveColor
+        zipButton.backgroundColor = typeInactiveColor
+        zipTypeButton.isHidden = true
+        docTypeStack.isHidden = false
+    }
+    
+    @IBAction func zipButtonAction(_ sender: Any) {
+        filesButton.backgroundColor = typeInactiveColor
+        zipButton.backgroundColor = typeActiveColor
+        zipTypeButton.isHidden = false
+        docTypeStack.isHidden = true
+    }
+    
+    @IBAction func jpgButtonAction(_ sender: Any) {
+        let data = convertPNGtoJPEG(pngImage: img!)
+        showShareSheet(sender: sender, file: data)
+    }
+    
+    @IBAction func xlsButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func txtButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func pdfButtonAction(_ sender: Any) {
+        let data = createPDF(from: img!)
+        showShareSheet(sender: sender, file: data)
+    }
+    
+    @IBAction func convertToZipButtonAction(_ sender: Any) {
+    }
+    
     
     @IBAction func cropAction(_ sender: Any) {
         let vc = CropViewController(croppingStyle: .default, image: img!)
@@ -215,6 +283,10 @@ class EditViewController: UIViewController {
             }
         }
         self.collectionIsShown.toggle()
+    }
+    
+    @IBAction func convertCancelAction(_ sender: Any) {
+        hideConvertView()
     }
     
     func setFilter(name: String, inputImage: UIImage) -> UIImage {
@@ -260,6 +332,31 @@ class EditViewController: UIViewController {
         }
     }
     
+    func showConvertView() {
+        self.confirmationBottomBar.isHidden = true
+        UIView.animate(withDuration: 0.3) {
+            self.mainBottomBar.frame.origin.y = self.view.frame.height
+            
+            if self.filterCollectionView.frame.origin.y != self.view.frame.height {
+                self.filterCollectionView.frame.origin.y = self.view.frame.height
+            }
+            
+            self.convertView.frame.origin.y
+             = self.view.frame.height - 340
+        }
+    }
+    
+    func hideConvertView() {
+        UIView.animate(withDuration: 0.3) {
+            self.mainBottomBar.frame.origin.y = self.view.frame.height - 130
+            self.convertView.frame.origin.y
+             = self.view.frame.height
+        } completion: { _ in
+            self.confirmationBottomBar.isHidden = false
+        }
+        self.convertButton.isHidden = false
+    }
+    
     func save(_ image: UIImage) {
         self.editImg.image = image
         self.img = image
@@ -277,6 +374,40 @@ class EditViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         return image
+    }
+    
+    func createPDF(from image: UIImage) -> Data {
+        let pdfPageSize = image.size
+        var pdfData = NSMutableData()
+            
+        UIGraphicsBeginPDFContextToData(pdfData, CGRect(origin: .zero, size: pdfPageSize), nil)
+        UIGraphicsBeginPDFPage()
+            
+        let imageRect = CGRect(origin: .zero, size: pdfPageSize)
+        image.draw(in: imageRect)
+            
+        UIGraphicsEndPDFContext()
+        
+        return pdfData as Data
+    }
+    
+    func convertPNGtoJPEG(pngImage: UIImage) -> Data? {
+        guard let pngData = pngImage.pngData() else {
+            return nil
+        }
+        
+        guard let image = UIImage(data: pngData) else {
+            return nil
+        }
+        
+        // Set the compression quality (0.0 to 1.0)
+        let compressionQuality: CGFloat = 0.8
+        
+        guard let jpegData = image.jpegData(compressionQuality: compressionQuality) else {
+            return nil
+        }
+        
+        return jpegData
     }
 }
 

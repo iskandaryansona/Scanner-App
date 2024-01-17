@@ -11,12 +11,19 @@
             <connections>
                 <outlet property="confirmationBottomBar" destination="29G-El-Jue" id="rud-ao-thE"/>
                 <outlet property="convertButton" destination="laS-fg-kiH" id="eIQ-dq-p92"/>
+                <outlet property="convertCancelButton" destination="t5i-OO-Q2o" id="Ol0-yz-bw3"/>
+                <outlet property="convertView" destination="yFJ-qz-bic" id="IEE-Te-Phw"/>
+                <outlet property="docTypeStack" destination="33O-wS-FrG" id="zDo-6A-sYF"/>
                 <outlet property="editImg" destination="lO9-pz-phH" id="oQC-6y-jis"/>
+                <outlet property="filesButton" destination="cHx-rK-wWV" id="2yU-qs-VaX"/>
                 <outlet property="filterCollectionView" destination="qTu-cq-0lP" id="5it-hx-GLR"/>
                 <outlet property="mainBottomBar" destination="g9u-Sk-Evb" id="ZWp-RU-HkZ"/>
                 <outlet property="movableImageView" destination="tQa-gS-q23" id="qGp-aU-fXT"/>
                 <outlet property="movableView" destination="q2a-4Y-3bA" id="BJx-eZ-fcz"/>
+                <outlet property="subConvertView" destination="QjH-Oj-vw3" id="wok-5x-mE7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zipButton" destination="9nv-xZ-ce5" id="lGc-ed-5kf"/>
+                <outlet property="zipTypeButton" destination="Fzo-0z-xMC" id="Gsa-9K-Q59"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -24,11 +31,11 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lO9-pz-phH">
-                    <rect key="frame" x="-8" y="135" width="408" height="576"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="lO9-pz-phH">
+                    <rect key="frame" x="0.0" y="135" width="393" height="569"/>
+                    <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qTu-cq-0lP">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" id="qTu-cq-0lP">
                     <rect key="frame" x="0.0" y="724" width="393" height="130"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.14509806040000001" green="0.15294116739999999" blue="0.1725490093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -101,7 +108,7 @@
                         <constraint firstAttribute="bottom" secondItem="BKc-26-HAx" secondAttribute="bottom" constant="25" id="T0a-QH-vuu"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="29G-El-Jue">
+                <view contentMode="scaleToFill" id="29G-El-Jue">
                     <rect key="frame" x="0.0" y="719" width="393" height="130"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -173,13 +180,142 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
+                <view contentMode="scaleToFill" id="yFJ-qz-bic">
+                    <rect key="frame" x="0.0" y="509" width="393" height="340"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5i-OO-Q2o">
+                            <rect key="frame" x="116.66666666666669" y="267" width="160" height="40"/>
+                            <color key="backgroundColor" red="0.14901961389999999" green="0.15294116739999999" blue="0.1764705926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="160" id="YrT-wd-za6"/>
+                                <constraint firstAttribute="height" constant="40" id="iiq-Ed-Tat"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                            <connections>
+                                <action selector="convertCancelAction:" destination="-1" eventType="touchUpInside" id="omU-fd-sRc"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjH-Oj-vw3">
+                            <rect key="frame" x="13" y="14" width="367" height="243"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="33O-wS-FrG">
+                                    <rect key="frame" x="73.666666666666686" y="91.666666666666629" width="220" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JW-GB-PbJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="55" height="60"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="jpg_icon"/>
+                                            <connections>
+                                                <action selector="jpgButtonAction:" destination="-1" eventType="touchUpInside" id="C6t-8Q-qu4"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzT-mU-WzX">
+                                            <rect key="frame" x="54.999999999999986" y="0.0" width="55" height="60"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="xls_icon"/>
+                                            <connections>
+                                                <action selector="xlsButtonAction:" destination="-1" eventType="touchUpInside" id="fw5-KI-6Xb"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxr-m1-vX5">
+                                            <rect key="frame" x="110" y="0.0" width="55" height="60"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="txt_icon"/>
+                                            <connections>
+                                                <action selector="txtButtonAction:" destination="-1" eventType="touchUpInside" id="dXh-dj-qjN"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6y-q5-4eF">
+                                            <rect key="frame" x="165" y="0.0" width="55" height="60"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="pdf_icon"/>
+                                            <connections>
+                                                <action selector="pdfButtonAction:" destination="-1" eventType="touchUpInside" id="g8P-Fz-wDJ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="220" id="CF3-IL-gVD"/>
+                                    </constraints>
+                                </stackView>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-0z-xMC">
+                                    <rect key="frame" x="144" y="85" width="78" height="74"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="zip_icon"/>
+                                    <connections>
+                                        <action selector="convertToZipButtonAction:" destination="-1" eventType="touchUpInside" id="YAb-oC-EoN"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.14901961389999999" green="0.15294116739999999" blue="0.1764705926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="33O-wS-FrG" firstAttribute="centerX" secondItem="QjH-Oj-vw3" secondAttribute="centerX" id="3Bc-aJ-fe2"/>
+                                <constraint firstItem="33O-wS-FrG" firstAttribute="centerY" secondItem="QjH-Oj-vw3" secondAttribute="centerY" id="b0p-4H-fGh"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHx-rK-wWV">
+                            <rect key="frame" x="106.66666666666669" y="0.0" width="78" height="28"/>
+                            <color key="backgroundColor" red="0.30196079609999998" green="0.62745100259999997" blue="0.90980386729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="78" id="AxZ-rI-Wyf"/>
+                                <constraint firstAttribute="height" constant="28" id="doQ-ok-BYz"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Files"/>
+                            <connections>
+                                <action selector="filesButtonAction:" destination="-1" eventType="touchUpInside" id="hPy-a9-2DJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nv-xZ-ce5">
+                            <rect key="frame" x="208.66666666666666" y="0.0" width="77.999999999999972" height="28"/>
+                            <color key="backgroundColor" red="0.14901961389999999" green="0.15294116739999999" blue="0.1764705926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="U1D-f7-VBn"/>
+                                <constraint firstAttribute="width" constant="78" id="dYe-pM-CLX"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="ZIP"/>
+                            <connections>
+                                <action selector="zipButtonAction:" destination="-1" eventType="touchUpInside" id="bsI-c0-nHu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="QjH-Oj-vw3" firstAttribute="top" secondItem="yFJ-qz-bic" secondAttribute="top" constant="14" id="1eP-ei-9pZ"/>
+                        <constraint firstItem="cHx-rK-wWV" firstAttribute="top" secondItem="yFJ-qz-bic" secondAttribute="top" id="OGo-eQ-Vjw"/>
+                        <constraint firstItem="t5i-OO-Q2o" firstAttribute="top" secondItem="QjH-Oj-vw3" secondAttribute="bottom" constant="10" id="XuW-RH-X1F"/>
+                        <constraint firstItem="9nv-xZ-ce5" firstAttribute="leading" secondItem="yFJ-qz-bic" secondAttribute="centerX" constant="12" id="YGG-L9-tbN"/>
+                        <constraint firstAttribute="centerX" secondItem="cHx-rK-wWV" secondAttribute="trailing" constant="12" id="Ya2-iF-a6S"/>
+                        <constraint firstItem="QjH-Oj-vw3" firstAttribute="leading" secondItem="yFJ-qz-bic" secondAttribute="leading" constant="13" id="YiQ-pN-e6R"/>
+                        <constraint firstAttribute="bottom" secondItem="t5i-OO-Q2o" secondAttribute="bottom" constant="33" id="ZEi-cv-ysx"/>
+                        <constraint firstItem="9nv-xZ-ce5" firstAttribute="top" secondItem="yFJ-qz-bic" secondAttribute="top" id="m9n-3h-OdO"/>
+                        <constraint firstAttribute="centerX" secondItem="t5i-OO-Q2o" secondAttribute="centerX" id="moC-O5-NWH"/>
+                        <constraint firstAttribute="trailing" secondItem="QjH-Oj-vw3" secondAttribute="trailing" constant="13" id="vEd-Oi-aaM"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.13333332540000001" green="0.13333332540000001" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="xtb-Ow-Zra" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2bR-4E-Fba"/>
+                <constraint firstAttribute="trailing" secondItem="lO9-pz-phH" secondAttribute="trailing" id="5xu-r3-AKo"/>
                 <constraint firstItem="xtb-Ow-Zra" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="77s-Uq-4Fn"/>
+                <constraint firstItem="yFJ-qz-bic" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="509" id="7ie-f7-U0v"/>
+                <constraint firstItem="yFJ-qz-bic" firstAttribute="leading" secondItem="xtb-Ow-Zra" secondAttribute="leading" id="9iT-bX-CYg"/>
+                <constraint firstItem="yFJ-qz-bic" firstAttribute="trailing" secondItem="qTu-cq-0lP" secondAttribute="trailing" id="CrR-Tr-ewe"/>
                 <constraint firstItem="xtb-Ow-Zra" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DBx-99-fks"/>
+                <constraint firstItem="yFJ-qz-bic" firstAttribute="leading" secondItem="qTu-cq-0lP" secondAttribute="leading" id="VX1-ZK-rOn"/>
+                <constraint firstItem="yFJ-qz-bic" firstAttribute="centerX" secondItem="lO9-pz-phH" secondAttribute="centerX" id="naU-9v-4ru"/>
+                <constraint firstItem="yFJ-qz-bic" firstAttribute="trailing" secondItem="xtb-Ow-Zra" secondAttribute="trailing" id="sw5-oV-QNz"/>
+                <constraint firstAttribute="bottom" secondItem="yFJ-qz-bic" secondAttribute="bottom" constant="3" id="zaU-hk-bBF"/>
+                <constraint firstItem="lO9-pz-phH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zyw-t1-rvY"/>
             </constraints>
             <point key="canvasLocation" x="-8.3969465648854964" y="19.718309859154932"/>
         </view>
@@ -190,6 +326,11 @@
         <image name="filter" width="70" height="67"/>
         <image name="icon_save" width="42" height="42"/>
         <image name="icon_share" width="42" height="42"/>
+        <image name="jpg_icon" width="54" height="60"/>
+        <image name="pdf_icon" width="45" height="59"/>
         <image name="signature" width="75.333335876464844" height="73"/>
+        <image name="txt_icon" width="50" height="59"/>
+        <image name="xls_icon" width="55" height="60"/>
+        <image name="zip_icon" width="54" height="60"/>
     </resources>
 </document>
