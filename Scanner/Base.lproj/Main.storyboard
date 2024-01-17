@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="txJ-SY-sRG">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -402,6 +403,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOQ-J4-pki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1417.5572519083969" y="-676.05633802816908"/>
+        </scene>
+        <!--Cloud FilesVC-->
+        <scene sceneID="3Po-mk-CrV">
+            <objects>
+                <viewController storyboardIdentifier="CloudFilesVC" id="nNX-KL-r5p" customClass="CloudFilesVC" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fPJ-ib-5bl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="CtJ-Dt-qnz">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nNX-KL-r5p" id="ILR-aQ-gl1"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hxs-v5-ppu">
+                                <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nNX-KL-r5p" id="BfD-t0-c73"/>
+                                    <outlet property="delegate" destination="nNX-KL-r5p" id="kUZ-V2-gxM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vmC-bk-l7t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hxs-v5-ppu" firstAttribute="top" secondItem="CtJ-Dt-qnz" secondAttribute="bottom" id="Bca-kt-tNa"/>
+                            <constraint firstItem="vmC-bk-l7t" firstAttribute="bottom" secondItem="hxs-v5-ppu" secondAttribute="bottom" id="I3S-dJ-fvb"/>
+                            <constraint firstItem="CtJ-Dt-qnz" firstAttribute="leading" secondItem="vmC-bk-l7t" secondAttribute="leading" id="LP3-1c-p18"/>
+                            <constraint firstItem="hxs-v5-ppu" firstAttribute="leading" secondItem="vmC-bk-l7t" secondAttribute="leading" id="ZUd-I3-57I"/>
+                            <constraint firstItem="CtJ-Dt-qnz" firstAttribute="trailing" secondItem="vmC-bk-l7t" secondAttribute="trailing" id="cNv-Sg-ctg"/>
+                            <constraint firstItem="vmC-bk-l7t" firstAttribute="trailing" secondItem="hxs-v5-ppu" secondAttribute="trailing" id="kSQ-Ur-Kyl"/>
+                            <constraint firstItem="CtJ-Dt-qnz" firstAttribute="top" secondItem="vmC-bk-l7t" secondAttribute="top" id="wlX-9V-9Fm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="CtJ-Dt-qnz" id="5ey-WZ-9Nj"/>
+                        <outlet property="tableViewFiles" destination="hxs-v5-ppu" id="Tj2-aR-IN5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lO8-7F-Q85" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="4"/>
         </scene>
     </scenes>
     <resources>

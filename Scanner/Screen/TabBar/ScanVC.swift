@@ -6,19 +6,34 @@
 //
 
 import UIKit
+import GoogleSignIn
+import GoogleAPIClientForREST
+import GTMSessionFetcher
 
 class ScanVC: UIViewController {
     
     @IBOutlet weak var menuCollection: UICollectionView!
     
+    
     var imgArr:[String] = ["menu.camera","menu.gallery","menu.drive"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    private func fetchFiles(_ user: GIDGoogleUser) {
+        guard let vc = self.storyboard?.instantiateViewController(identifier: "CloudFilesVC") as? CloudFilesVC else {
+            return
+        }
+        vc.service.authorizer = user.fetcherAuthorizer
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate {
@@ -45,8 +60,20 @@ extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource, UINaviga
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
         default:
-            return
+            if GIDSignIn.sharedInstance.currentUser == nil {
+                
+                GIDSignIn.sharedInstance.signIn(withPresenting: self){user, error in
+                    if let error = error {
+                        Alert.show(message: error.localizedDescription)
+                    }else{
+                        if let user = user {
+                            self.fetchFiles(user.user)
+                        }
+                    }
+                }
+            }
         }
+        return
     }
 }
 
