@@ -71,7 +71,8 @@ class EditViewController: UIViewController {
         configUI()
         setupCollectionView()
         
-        movableImageView.layer.borderWidth = 1
+        movableImageView.layer.borderWidth = 2
+        movableImageView.layer.borderColor = UIColor.orange.cgColor
         movableImageView.isHidden = true
         
         currentWidth = movableImageView.bounds.width
@@ -137,12 +138,12 @@ class EditViewController: UIViewController {
         movableView.transform = movableView.transform.rotated(by: gesture.rotation)
     }
     
-    private func configUI(){
+    private func configUI() {
         if let img = img {
             editImg.contentMode = .scaleAspectFit
             editImg.image = img
             originalImg = img
-        }else if let imgLink = imgLink {
+        } else if let imgLink = imgLink {
             editImg.contentMode = .scaleAspectFit
             editImg.kf.setImage(with: URL(string: imgLink))
             originalImg = editImg.image ?? UIImage()
@@ -186,20 +187,19 @@ class EditViewController: UIViewController {
         hideConfirmationBar()
         movableImageView.layer.borderWidth = 0
         movableView.removeFromSuperview()
+        
         let t = movableView.transform
         movableView.transform = .identity
+        
         let frame = self.view.convert(movableView.frame, to: editImg)
         movableView.frame = frame
         movableView.transform = t
         editImg.addSubview(movableView)
-        for subview in movableView.subviews {
-            subview.isHidden = true
-        }
-        movableImageView.isHidden = false
+        
         let img = self.getImageFrom(view: self.editImg)
-//        for subview in editImg.subviews {
-//            subview.removeFromSuperview()
-//        }
+        movableView.removeFromSuperview()
+        self.view.addSubview(movableView)
+        movableView.isHidden = true
         save(img ?? UIImage())
     }
     
@@ -311,7 +311,7 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func convertToZipButtonAction(_ sender: Any) {
-        var a = img!.jpegData(compressionQuality: 0.1)
+        let a = img!.jpegData(compressionQuality: 0.1)
         showShareSheet(sender: sender, file: a)
     }
     
@@ -355,8 +355,8 @@ class EditViewController: UIViewController {
         if name == "none" {
             return inputImage
         }
-        if let img = CIImage(image: inputImage) {
-            let inputCIImage = CIImage(image: inputImage)
+        if let inputCIImage = CIImage(image: inputImage) {
+//            let inputCIImage = CIImage(image: inputImage)
             
             let filter = CIFilter(name: name)!
             filter.setDefaults()
@@ -532,7 +532,8 @@ extension EditViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCell.id, for: indexPath) as! FilterCell
-        cell.imageView.image = setFilter(name: filterNames[indexPath.row], inputImage: originalImg)
+        let image = setFilter(name: filterNames[indexPath.row], inputImage: originalImg)
+        cell.imageView.image = image
         cell.nameLabel.text = data[indexPath.row]
         return cell
     }
@@ -562,8 +563,17 @@ extension EditViewController: CropViewControllerDelegate {
 extension EditViewController: SignatureDelegate {
     func addSign(sign: UIImage) {
         movableImageView.image = sign
+        movableView.transform = .identity
+        movableView.frame = CGRect(x: 214, y: 458, width: 110, height: 85)
+        movableView.isHidden = false
         movableImageView.isHidden = false
+        movableImageView.layer.borderWidth = 2
+        movableImageView.frame = movableView.bounds
         showConfirmationBar()
+    }
+    
+    func cancel() {
+        movableView.isHidden = true
     }
 }
 

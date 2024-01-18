@@ -9,6 +9,7 @@ import UIKit
 
 protocol SignatureDelegate: AnyObject {
     func addSign(sign: UIImage)
+    func cancel()
 }
 
 class DrawSignatureViewController: UIViewController {
@@ -38,13 +39,13 @@ class DrawSignatureViewController: UIViewController {
     }
     
     @IBAction func cancelButtonAction(_ sender: Any) {
+        delegate?.cancel()
         self.dismiss(animated: true)
     }
     
     @IBAction func submitButtonAction(_ sender: Any) {
         guard let image = drawingView.save() else { return }
         delegate?.addSign(sign: image)
-        self.dismiss(animated: true)
         self.dismiss(animated: true)
     }
 }
