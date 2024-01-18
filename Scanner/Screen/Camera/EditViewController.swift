@@ -95,6 +95,7 @@ class EditViewController: UIViewController {
     @objc func handlePan(_ sender: UIPanGestureRecognizer) {
         let point = sender.location(in: self.view)
         if sender.state == .began {
+            //CRASH
             if !movableView.frame.contains(point) {
                 move = false
                 return

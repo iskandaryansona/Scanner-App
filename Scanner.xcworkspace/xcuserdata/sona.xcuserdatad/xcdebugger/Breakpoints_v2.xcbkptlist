@@ -14,8 +14,8 @@
             filePath = "Scanner/Screen/Camera/EditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "saveSignAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Scanner/Screen/Camera/EditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "saveSignAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "Scanner/Screen/Camera/EditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "saveSignAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,10 +62,10 @@
             filePath = "Scanner/Screen/Camera/EditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "507"
-            endingLineNumber = "507"
+            startingLineNumber = "508"
+            endingLineNumber = "508"
             landmarkName = "updateFile(item:thumb:)"
-            landmarkType = "9">
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "32C16F18-36A1-4722-92A1-1EEA19071E78 - cd76eb4b2121f47"
@@ -110,10 +110,10 @@
             filePath = "Scanner/Screen/Camera/EditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "508"
-            endingLineNumber = "508"
+            startingLineNumber = "509"
+            endingLineNumber = "509"
             landmarkName = "updateFile(item:thumb:)"
-            landmarkType = "9">
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "14D0D2DC-0421-45D8-845C-1EC22861517B - cd76eb4b2121fa8"
@@ -173,10 +173,10 @@
             filePath = "Scanner/Screen/Camera/EditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "509"
-            endingLineNumber = "509"
+            startingLineNumber = "510"
+            endingLineNumber = "510"
             landmarkName = "updateFile(item:thumb:)"
-            landmarkType = "9">
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "811494B9-8EE0-453D-9898-E1471E913764 - cd76eb4b2121f89"
@@ -239,102 +239,7 @@
             startingLineNumber = "511"
             endingLineNumber = "511"
             landmarkName = "updateFile(item:thumb:)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "431870B8-2C41-4977-B716-5D89E3C6DD23 - cd76eb4b2121fcb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
-                  moduleName = "Scanner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "509"
-                  endingLineNumber = "509"
-                  offsetFromSymbolStart = "672">
-               </Location>
-               <Location
-                  uuid = "431870B8-2C41-4977-B716-5D89E3C6DD23 - cd76eb4b2121fcb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
-                  moduleName = "Scanner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "509"
-                  endingLineNumber = "509"
-                  offsetFromSymbolStart = "1072">
-               </Location>
-               <Location
-                  uuid = "431870B8-2C41-4977-B716-5D89E3C6DD23 - cd76eb4b2121c0d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
-                  moduleName = "Scanner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "511"
-                  endingLineNumber = "511"
-                  offsetFromSymbolStart = "672">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "14028139-ABBE-4680-B289-0D3BCF500FF5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "506"
-            endingLineNumber = "506"
-            landmarkName = "updateFile(item:thumb:)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "14028139-ABBE-4680-B289-0D3BCF500FF5 - cd76eb4b2121f47"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
-                  moduleName = "Scanner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "505"
-                  endingLineNumber = "505"
-                  offsetFromSymbolStart = "192">
-               </Location>
-               <Location
-                  uuid = "14028139-ABBE-4680-B289-0D3BCF500FF5 - cd76eb4b2121f89"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
-                  moduleName = "Scanner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "507"
-                  endingLineNumber = "507"
-                  offsetFromSymbolStart = "192">
-               </Location>
-            </Locations>
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -347,10 +252,10 @@
             filePath = "Scanner/Screen/Camera/EditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "488"
-            endingLineNumber = "488"
+            startingLineNumber = "489"
+            endingLineNumber = "489"
             landmarkName = "createFile(name:thumb:)"
-            landmarkType = "9">
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "7D3B6B64-2FD0-46B9-B7DE-DFA5F76E5995 - 236cb0301d630687"
@@ -383,6 +288,86 @@
                   offsetFromSymbolStart = "352">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C1BC2C7-B33A-4E25-964E-62AECABC4E01"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/Camera/EditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "saveButtonAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13241EDB-2ECF-4F88-9F04-95A33199A28B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/Camera/EditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "saveButtonAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B961650F-D6CC-4641-A6D7-39E45770B41E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/Camera/EditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "saveButtonAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E71421EA-9668-4554-AD68-673A5BF536DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/Camera/EditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "512"
+            endingLineNumber = "512"
+            landmarkName = "updateFile(item:thumb:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DFDB269D-2658-4FC5-B235-1E01159325C1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/Camera/EditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "513"
+            endingLineNumber = "513"
+            landmarkName = "updateFile(item:thumb:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
