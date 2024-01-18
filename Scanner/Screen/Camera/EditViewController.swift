@@ -8,6 +8,7 @@
 import UIKit
 import CropViewController
 import CoreData
+import Vision
 
 class EditViewController: UIViewController {
     
@@ -255,15 +256,48 @@ class EditViewController: UIViewController {
         showShareSheet(sender: sender, file: data)
     }
     
-    @IBAction func txtButtonAction(_ sender: Any) {
-    }
-    
     @IBAction func pdfButtonAction(_ sender: Any) {
         let data = createPDF(from: img!)
         showShareSheet(sender: sender, file: data)
     }
     
+    @IBAction func txtButtonAction(_ sender: Any) {
+        guard let cgImage = editImg.image?.cgImage else { return }
+        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+        let request = VNRecognizeTextRequest { request, error in
+            guard let observations = request.results as? [VNRecognizedTextObservation], error == nil else {
+                self.showAlert()
+                return
+            }
+            
+            let text = observations.compactMap({
+            $0.topCandidates(1).first?.string
+            }).joined(separator: ", ")
+            if text == "" {
+                self.showAlert()
+            } else {
+                self.showShareSheet(sender: sender, file: text)
+            }
+        }
+        request.recognitionLevel = VNRequestTextRecognitionLevel.accurate
+        
+        do {
+            try handler.perform([request])
+        } catch {
+            //handle error
+            print(error)
+        }
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Fail", message: "Cannot find text", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func convertToZipButtonAction(_ sender: Any) {
+        var a = img!.jpegData(compressionQuality: 0.1)
+        showShareSheet(sender: sender, file: a)
     }
     
     
