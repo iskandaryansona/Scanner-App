@@ -10,6 +10,7 @@ import UIKit
 class SettingsVC: UIViewController {
     
     var imgArr:[String] = ["settings.premium","settings.feedback","settings.rate","settings.share","settings.privacy"]
+    let privacyURL = "https://sites.google.com/view/privacypolicy-luxescan?pli=1"
 
     @IBOutlet weak var settingsCollection: UICollectionView!
     
@@ -44,10 +45,17 @@ extension SettingsVC: UICollectionViewDelegate, UICollectionViewDataSource{
     }
         
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
+        switch indexPath.row {
+        case 0:
             let vc = PaywallViewController(from: .main)
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
+        case 4:
+            let vc = WebViewController()
+            self.present(vc, animated: true)
+            vc.showUrl(link: privacyURL)
+        default:
+            return
         }
     }
 }
