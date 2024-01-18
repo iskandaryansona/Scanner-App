@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 import CropViewController
 import CoreData
 import Vision
@@ -59,6 +60,9 @@ class EditViewController: UIViewController {
     var name = "Untitled"
     
     var img: UIImage?
+
+    var imgLink: String?
+
     var originalImg = UIImage()
     
     override func viewDidLoad() {
@@ -229,6 +233,9 @@ class EditViewController: UIViewController {
             updateFile(item: currentItem, thumb: img!)
         } else {
             createFile(name: name, thumb: img!)
+        }
+        if let imgLink = imgLink {
+            editImg?.kf.setImage(with: URL(string: imgLink))
         }
     }
 

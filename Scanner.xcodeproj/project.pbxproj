@@ -44,6 +44,11 @@
 		E7A68CA62B581FB50004A877 /* SavedFiles+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A68CA42B581FB50004A877 /* SavedFiles+CoreDataClass.swift */; };
 		E7A68CA72B581FB50004A877 /* SavedFiles+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A68CA52B581FB50004A877 /* SavedFiles+CoreDataProperties.swift */; };
 		E7CDBDC62B34E0E90093096A /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CDBDC52B34E0E90093096A /* OnBoardingVC.swift */; };
+		E7FFDC082B5869D800196D6A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFDC072B5869D800196D6A /* Alert.swift */; };
+		E7FFDC0A2B5869F200196D6A /* CloudFilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFDC092B5869F200196D6A /* CloudFilesManager.swift */; };
+		E7FFDC0D2B586BC400196D6A /* CloudFileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFDC0C2B586BC400196D6A /* CloudFileTableCell.swift */; };
+		E7FFDC0F2B586C1300196D6A /* CloudFileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7FFDC0E2B586C1300196D6A /* CloudFileTableCell.xib */; };
+		E7FFDC112B586C5F00196D6A /* CloudFilesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFDC102B586C5F00196D6A /* CloudFilesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +91,11 @@
 		E7A68CA42B581FB50004A877 /* SavedFiles+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SavedFiles+CoreDataClass.swift"; path = "Scanner/SavedFiles+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E7A68CA52B581FB50004A877 /* SavedFiles+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SavedFiles+CoreDataProperties.swift"; path = "Scanner/SavedFiles+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E7CDBDC52B34E0E90093096A /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
+		E7FFDC072B5869D800196D6A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		E7FFDC092B5869F200196D6A /* CloudFilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFilesManager.swift; sourceTree = "<group>"; };
+		E7FFDC0C2B586BC400196D6A /* CloudFileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFileTableCell.swift; sourceTree = "<group>"; };
+		E7FFDC0E2B586C1300196D6A /* CloudFileTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CloudFileTableCell.xib; sourceTree = "<group>"; };
+		E7FFDC102B586C5F00196D6A /* CloudFilesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFilesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +229,7 @@
 		E7CDBDC32B34E0C80093096A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				E7FFDC062B58696E00196D6A /* Google Drive */,
 				E79B7FE72B4D43BD004CAAF0 /* Camera */,
 				E76272CB2B39EB5B008189C3 /* TabBar */,
 				E72FF3222B371ABC002E04F1 /* PayWall */,
@@ -233,6 +244,26 @@
 				E7CDBDC52B34E0E90093096A /* OnBoardingVC.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		E7FFDC062B58696E00196D6A /* Google Drive */ = {
+			isa = PBXGroup;
+			children = (
+				E7FFDC0B2B586BBC00196D6A /* CloudFileTableCell */,
+				E7FFDC072B5869D800196D6A /* Alert.swift */,
+				E7FFDC102B586C5F00196D6A /* CloudFilesVC.swift */,
+				E7FFDC092B5869F200196D6A /* CloudFilesManager.swift */,
+			);
+			path = "Google Drive";
+			sourceTree = "<group>";
+		};
+		E7FFDC0B2B586BBC00196D6A /* CloudFileTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				E7FFDC0E2B586C1300196D6A /* CloudFileTableCell.xib */,
+				E7FFDC0C2B586BC400196D6A /* CloudFileTableCell.swift */,
+			);
+			path = CloudFileTableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +337,7 @@
 				E75557832B55B79600E455A4 /* EditViewController.xib in Resources */,
 				E71AA9DE2B3388B700DD5FA1 /* LaunchScreen.storyboard in Resources */,
 				E79B7FFB2B4D68D8004CAAF0 /* PaywallViewController.xib in Resources */,
+				E7FFDC0F2B586C1300196D6A /* CloudFileTableCell.xib in Resources */,
 				E78188612B56BD5400D90735 /* WebViewController.xib in Resources */,
 				E79B7FEB2B4D43EF004CAAF0 /* CameraViewController.xib in Resources */,
 				E781886A2B56CD2900D90735 /* DrawSignatureViewController.xib in Resources */,
@@ -368,6 +400,7 @@
 				E71AA9D62B3388B500DD5FA1 /* ViewController.swift in Sources */,
 				E78188582B56A0EB00D90735 /* FilterCell.swift in Sources */,
 				E76272D52B3A017A008189C3 /* ScanVC.swift in Sources */,
+				E7FFDC0D2B586BC400196D6A /* CloudFileTableCell.swift in Sources */,
 				E79B7FE62B4C7021004CAAF0 /* SettingsCell.swift in Sources */,
 				E79B7FF12B4D5D0D004CAAF0 /* UIImage+Crop.swift in Sources */,
 				E7CDBDC62B34E0E90093096A /* OnBoardingVC.swift in Sources */,
@@ -380,6 +413,12 @@
 				E71AA9D22B3388B500DD5FA1 /* AppDelegate.swift in Sources */,
 				E750A0352B489A1B0067E00D /* MenuCell.swift in Sources */,
 				E76272D02B39EF0B008189C3 /* HistoryVC.swift in Sources */,
+				E7FFDC112B586C5F00196D6A /* CloudFilesVC.swift in Sources */,
+				E7FFDC0A2B5869F200196D6A /* CloudFilesManager.swift in Sources */,
+				E703A2782B35B1B100617F9A /* UIView+Extension.swift in Sources */,
+				E71AA9D42B3388B500DD5FA1 /* SceneDelegate.swift in Sources */,
+				E76272D32B39EF9A008189C3 /* SettingsVC.swift in Sources */,
+				E7FFDC082B5869D800196D6A /* Alert.swift in Sources */,
 				E7A68C972B5819000004A877 /* HistoryCell.swift in Sources */,
 				E78188602B56BD5400D90735 /* WebViewController.swift in Sources */,
 				E703A2782B35B1B100617F9A /* UIView+Extension.swift in Sources */,
@@ -549,6 +588,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,6 +619,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,7 +29,8 @@
                                 <constraint firstAttribute="width" constant="40" id="4Nf-1N-hFi"/>
                                 <constraint firstAttribute="height" constant="40" id="hdo-XH-w9n"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="camera.back"/>
                             <buttonConfiguration key="configuration" style="plain" image="camera.back"/>
                             <connections>
                                 <action selector="backCamera:" destination="-1" eventType="touchUpInside" id="PhU-eJ-TXD"/>
@@ -40,7 +42,8 @@
                                 <constraint firstAttribute="height" constant="40" id="5d2-Uh-HXw"/>
                                 <constraint firstAttribute="width" constant="40" id="im3-4z-W1Y"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="camera.light"/>
                             <buttonConfiguration key="configuration" style="plain" image="camera.light"/>
                             <connections>
                                 <action selector="flashCamera:" destination="-1" eventType="touchUpInside" id="fJd-Kt-q1v"/>
@@ -82,7 +85,8 @@
                                 <constraint firstAttribute="height" constant="80" id="JCV-ES-qb6"/>
                                 <constraint firstAttribute="width" constant="80" id="MW1-ja-4Zo"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="make.photo"/>
                             <buttonConfiguration key="configuration" style="plain" image="make.photo"/>
                             <connections>
                                 <action selector="makePhoto:" destination="-1" eventType="touchUpInside" id="8XL-FR-h5S"/>
