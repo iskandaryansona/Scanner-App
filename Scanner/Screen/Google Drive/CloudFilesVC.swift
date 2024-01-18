@@ -78,6 +78,7 @@ extension CloudFilesVC: UITableViewDelegate, UITableViewDataSource, UISearchBarD
          } else {
              vc.imgLink = arrFiles[indexPath.row].iconLink
          }
+         vc.name = arrFiles[indexPath.row].name ?? "File"
          self.navigationController?.popViewController(animated: true)
          self.navigationController?.pushViewController(vc, animated: true)
 

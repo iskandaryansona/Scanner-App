@@ -146,6 +146,7 @@ class EditViewController: UIViewController {
             editImg.contentMode = .scaleAspectFit
             editImg.kf.setImage(with: URL(string: imgLink))
             originalImg = editImg.image ?? UIImage()
+            img = editImg.image ?? UIImage()
         }
         
         subConvertView.layer.borderWidth = 1
