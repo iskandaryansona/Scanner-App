@@ -196,9 +196,9 @@ class EditViewController: UIViewController {
         }
         movableImageView.isHidden = false
         let img = self.getImageFrom(view: self.editImg)
-        for subview in editImg.subviews {
-            subview.removeFromSuperview()
-        }
+//        for subview in editImg.subviews {
+//            subview.removeFromSuperview()
+//        }
         save(img ?? UIImage())
     }
     
