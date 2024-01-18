@@ -17,6 +17,9 @@ class PaywallViewController: UIViewController {
     @IBOutlet weak var termsOfUseButton: UIButton!
     @IBOutlet weak var privacePolicyButton: UIButton!
     
+    let termsURL = "https://sites.google.com/view/luxescan-terms-of-use"
+    let privacyURL = "https://sites.google.com/view/privacypolicy-luxescan?pli=1"
+    
     let from: PaywallFrom?
 
     override func viewDidLoad() {
@@ -66,11 +69,15 @@ class PaywallViewController: UIViewController {
     }
     
     @IBAction func termOfUse(_ sender: UIButton){
-        
+        let vc = WebViewController()
+        self.present(vc, animated: true)
+        vc.showUrl(link: termsURL)
     }
 
     @IBAction func privacyPolicy(_ sender: UIButton){
-        
+        let vc = WebViewController()
+        self.present(vc, animated: true)
+        vc.showUrl(link: privacyURL)
     }
 
 }

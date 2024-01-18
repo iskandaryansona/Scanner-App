@@ -85,6 +85,10 @@ extension ScanVC: UIImagePickerControllerDelegate {
 
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             let img = image.fixedOrientation()
+            let vc = EditViewController()
+            vc.img = img
+            vc.name = name
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
         picker.dismiss(animated: true)
