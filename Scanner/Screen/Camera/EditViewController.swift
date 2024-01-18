@@ -7,6 +7,7 @@
 
 import UIKit
 import CropViewController
+import CoreData
 
 class EditViewController: UIViewController {
     
@@ -24,8 +25,13 @@ class EditViewController: UIViewController {
     @IBOutlet weak var zipButton: UIButton!
     @IBOutlet weak var docTypeStack: UIStackView!
     @IBOutlet weak var zipTypeButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
     var move = true
+    var isFromHistory = false
+    
+    var currentItem = SavedFiles()
     
     let borderWidth: CGFloat = 1
     let resizersWidth: CGFloat = 6
@@ -45,8 +51,11 @@ class EditViewController: UIViewController {
     var currentHeight: CGFloat = 0
     var collectionIsShown = false
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     var data = ["Original", "Vivid", "Vivid Warm", "Vivid Cool", "Dramatic", "Dramatic Warm", "Dramatic Cool", "Mono", "Silvertone", "Noir"]
     var filterNames = ["none", "CIColorControls", "CIPhotoEffectChrome", "CIPhotoEffectFade", "CIPhotoEffectInstant", "CIPhotoEffectProcess", "CIPhotoEffectTonal", "CIPhotoEffectTransfer", "CISepiaTone", "CIPhotoEffectNoir"]
+    var name = "Untitled"
     
     var img: UIImage?
     var originalImg = UIImage()
@@ -202,17 +211,24 @@ class EditViewController: UIViewController {
     func showShareSheet(sender: Any, file: Any) {
         let shareBtn = sender as! UIButton
         let shareSheet = UIActivityViewController(activityItems: [file], applicationActivities: nil)
+        convertButton.setTitleColor(.white, for: .disabled)
         shareSheet.popoverPresentationController?.sourceView = self.view
         shareSheet.popoverPresentationController?.sourceRect = shareBtn.frame
         shareSheet.completionWithItemsHandler = { activity, success, items, error in
-            // TODO save to history
-            self.hideConvertView()
+            if success {
+                self.createFile(name: self.name, thumb: self.img!)
+                self.hideConvertView()
+            }
         }
         present(shareSheet, animated: true)
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {
-        // TODO save to history
+        if isFromHistory {
+            updateFile(item: currentItem, thumb: img!)
+        } else {
+            createFile(name: name, thumb: img!)
+        }
     }
 
     @IBAction func convertButtonAction(_ sender: Any) {
@@ -309,6 +325,10 @@ class EditViewController: UIViewController {
     }
     
     func showConfirmationBar() {
+        convertButton.isHidden = true
+        saveButton.isEnabled = false
+        shareButton.isEnabled = false
+        
         UIView.animate(withDuration: 0.3) {
             self.mainBottomBar.frame.origin.y = self.view.frame.height
             
@@ -322,6 +342,10 @@ class EditViewController: UIViewController {
     }
     
     func hideConfirmationBar() {
+        convertButton.isHidden = false
+        saveButton.isEnabled = true
+        shareButton.isEnabled = true
+        
         UIView.animate(withDuration: 0.3) {
             self.mainBottomBar.frame.origin.y = self.view.frame.height - 130
             self.confirmationBottomBar.frame.origin.y
@@ -406,6 +430,47 @@ class EditViewController: UIViewController {
         
         return jpegData
     }
+    
+    //MARK: - Work with Entity
+    func createFile(name: String, thumb: UIImage) {
+        let newFile = SavedFiles(context: context)
+        newFile.name = name
+        newFile.thumb = thumb.pngData() ?? UIImage().pngData()
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let formattedDate = dateFormatter.string(from: currentDate)
+        newFile.date = formattedDate
+        
+        do {
+            try context.save()
+//                getAllFolders()
+        }
+        catch {
+            
+        }
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+        
+    func updateFile(item: SavedFiles, thumb: UIImage) {
+        item.thumb = thumb.pngData()
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let formattedDate = dateFormatter.string(from: currentDate)
+        item.date = formattedDate
+    
+        do {
+            try context.save()
+//                getAllFolders()
+        }
+        catch {
+            
+        }
+        
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension EditViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -421,7 +486,7 @@ extension EditViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCell.id, for: indexPath) as! FilterCell
+        let cell = collectionView.cellForItem(at: indexPath) as! FilterCell
         let image = cell.imageView.image
         editImg.image = image
         img = image

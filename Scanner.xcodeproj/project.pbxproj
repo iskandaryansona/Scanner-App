@@ -41,6 +41,8 @@
 		E7A68C972B5819000004A877 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A68C952B5819000004A877 /* HistoryCell.swift */; };
 		E7A68C982B5819000004A877 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A68C962B5819000004A877 /* HistoryCell.xib */; };
 		E7A68C9B2B581E860004A877 /* ScannerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7A68C992B581E860004A877 /* ScannerModel.xcdatamodeld */; };
+		E7A68CA62B581FB50004A877 /* SavedFiles+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A68CA42B581FB50004A877 /* SavedFiles+CoreDataClass.swift */; };
+		E7A68CA72B581FB50004A877 /* SavedFiles+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A68CA52B581FB50004A877 /* SavedFiles+CoreDataProperties.swift */; };
 		E7CDBDC62B34E0E90093096A /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CDBDC52B34E0E90093096A /* OnBoardingVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		E7A68C952B5819000004A877 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryCell.swift; path = Scanner/Screen/TabBar/HistoryCell.swift; sourceTree = "<group>"; };
 		E7A68C962B5819000004A877 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HistoryCell.xib; path = Scanner/Screen/TabBar/HistoryCell.xib; sourceTree = "<group>"; };
 		E7A68C9A2B581E860004A877 /* ScannerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScannerModel.xcdatamodel; sourceTree = "<group>"; };
+		E7A68CA42B581FB50004A877 /* SavedFiles+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SavedFiles+CoreDataClass.swift"; path = "Scanner/SavedFiles+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E7A68CA52B581FB50004A877 /* SavedFiles+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SavedFiles+CoreDataProperties.swift"; path = "Scanner/SavedFiles+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E7CDBDC52B34E0E90093096A /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,8 @@
 		E71AA9C52B3388B500DD5FA1 = {
 			isa = PBXGroup;
 			children = (
+				E7A68CA42B581FB50004A877 /* SavedFiles+CoreDataClass.swift */,
+				E7A68CA52B581FB50004A877 /* SavedFiles+CoreDataProperties.swift */,
 				E7A68C952B5819000004A877 /* HistoryCell.swift */,
 				E7A68C962B5819000004A877 /* HistoryCell.xib */,
 				E71AA9D02B3388B500DD5FA1 /* Scanner */,
@@ -358,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A68CA62B581FB50004A877 /* SavedFiles+CoreDataClass.swift in Sources */,
 				E71AA9D62B3388B500DD5FA1 /* ViewController.swift in Sources */,
 				E78188582B56A0EB00D90735 /* FilterCell.swift in Sources */,
 				E76272D52B3A017A008189C3 /* ScanVC.swift in Sources */,
@@ -380,6 +387,7 @@
 				E76272D32B39EF9A008189C3 /* SettingsVC.swift in Sources */,
 				E7A68C9B2B581E860004A877 /* ScannerModel.xcdatamodeld in Sources */,
 				E79B7FFA2B4D68D8004CAAF0 /* PaywallViewController.swift in Sources */,
+				E7A68CA72B581FB50004A877 /* SavedFiles+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
