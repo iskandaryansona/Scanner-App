@@ -7,95 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "36409C2C-0411-489A-985C-6B4C997993F2"
+            uuid = "CABCC79F-7D10-4B67-B630-260BF06E68BD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
+            filePath = "Scanner/Screen/PayWall/IAPService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
-            landmarkName = "saveSignAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "81EFD609-16A8-4A93-A57B-F441A821DC7E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "saveSignAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "73A39D5C-C533-4FAA-A97F-4CB22D18404D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
-            landmarkName = "saveSignAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "32C16F18-36A1-4722-92A1-1EEA19071E78"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "508"
-            endingLineNumber = "508"
-            landmarkName = "updateFile(item:thumb:)"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "status()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "32C16F18-36A1-4722-92A1-1EEA19071E78 - cd76eb4b2121f47"
+                  uuid = "CABCC79F-7D10-4B67-B630-260BF06E68BD - 7014517955e54cf4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
+                  symbolName = "__C.SKPaymentTransactionState.status() -&gt; Swift.String"
                   moduleName = "Scanner"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "505"
-                  endingLineNumber = "505"
-                  offsetFromSymbolStart = "192">
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "128">
                </Location>
                <Location
-                  uuid = "32C16F18-36A1-4722-92A1-1EEA19071E78 - cd76eb4b2121f89"
+                  uuid = "CABCC79F-7D10-4B67-B630-260BF06E68BD - 7014517955e54cb2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
+                  symbolName = "__C.SKPaymentTransactionState.status() -&gt; Swift.String"
                   moduleName = "Scanner"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "507"
-                  endingLineNumber = "507"
-                  offsetFromSymbolStart = "192">
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "88">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -103,62 +55,111 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "14D0D2DC-0421-45D8-845C-1EC22861517B"
+            uuid = "3B35214F-6273-4F66-8E8D-18084477248C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
+            filePath = "Scanner/Screen/PayWall/IAPService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "509"
-            endingLineNumber = "509"
-            landmarkName = "updateFile(item:thumb:)"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "status()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14475F90-9171-4C59-8C1D-2A741287AEEC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/PayWall/IAPService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "status()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E34C6F4-4AC9-49BF-9697-7D3A3598966B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/PayWall/IAPService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "status()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91117DFB-977B-41D8-969F-D43A9FF40D23"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/PayWall/IAPService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "status()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09DB5D52-FA52-48E9-9E18-780C0C2FE940"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/PayWall/IAPService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "paymentQueue(_:updatedTransactions:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "14D0D2DC-0421-45D8-845C-1EC22861517B - cd76eb4b2121fa8"
+                  uuid = "09DB5D52-FA52-48E9-9E18-780C0C2FE940 - aca8b468389206af"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
+                  symbolName = "Scanner.IAPService.paymentQueue(_: __C.SKPaymentQueue, updatedTransactions: Swift.Array&lt;__C.SKPaymentTransaction&gt;) -&gt; ()"
                   moduleName = "Scanner"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "506"
-                  endingLineNumber = "506"
-                  offsetFromSymbolStart = "520">
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "272">
                </Location>
                <Location
-                  uuid = "14D0D2DC-0421-45D8-845C-1EC22861517B - cd76eb4b2121fa8"
+                  uuid = "09DB5D52-FA52-48E9-9E18-780C0C2FE940 - aca8b468389206af"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
+                  symbolName = "Scanner.IAPService.paymentQueue(_: __C.SKPaymentQueue, updatedTransactions: Swift.Array&lt;__C.SKPaymentTransaction&gt;) -&gt; ()"
                   moduleName = "Scanner"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "506"
-                  endingLineNumber = "506"
-                  offsetFromSymbolStart = "920">
-               </Location>
-               <Location
-                  uuid = "14D0D2DC-0421-45D8-845C-1EC22861517B - cd76eb4b2121fea"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
-                  moduleName = "Scanner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "508"
-                  endingLineNumber = "508"
-                  offsetFromSymbolStart = "520">
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "264">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -166,62 +167,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "811494B9-8EE0-453D-9898-E1471E913764"
+            uuid = "655E9E50-E05B-4218-A090-2FF382C4F4BC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
+            filePath = "Scanner/Screen/PayWall/IAPService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "510"
-            endingLineNumber = "510"
-            landmarkName = "updateFile(item:thumb:)"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "paymentQueue(_:updatedTransactions:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "811494B9-8EE0-453D-9898-E1471E913764 - cd76eb4b2121f89"
+                  uuid = "655E9E50-E05B-4218-A090-2FF382C4F4BC - aca8b468389206ed"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
+                  symbolName = "Scanner.IAPService.paymentQueue(_: __C.SKPaymentQueue, updatedTransactions: Swift.Array&lt;__C.SKPaymentTransaction&gt;) -&gt; ()"
                   moduleName = "Scanner"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "507"
-                  endingLineNumber = "507"
-                  offsetFromSymbolStart = "528">
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "344">
                </Location>
                <Location
-                  uuid = "811494B9-8EE0-453D-9898-E1471E913764 - cd76eb4b2121f89"
+                  uuid = "655E9E50-E05B-4218-A090-2FF382C4F4BC - aca8b468389206ed"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
+                  symbolName = "Scanner.IAPService.paymentQueue(_: __C.SKPaymentQueue, updatedTransactions: Swift.Array&lt;__C.SKPaymentTransaction&gt;) -&gt; ()"
                   moduleName = "Scanner"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "507"
-                  endingLineNumber = "507"
-                  offsetFromSymbolStart = "928">
-               </Location>
-               <Location
-                  uuid = "811494B9-8EE0-453D-9898-E1471E913764 - cd76eb4b2121fcb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.updateFile(item: Scanner.SavedFiles, thumb: __C.UIImage) -&gt; ()"
-                  moduleName = "Scanner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "509"
-                  endingLineNumber = "509"
-                  offsetFromSymbolStart = "528">
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "272">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -229,63 +215,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "431870B8-2C41-4977-B716-5D89E3C6DD23"
+            uuid = "6A48E79D-B418-474A-A8E0-0B0BD5CD53A3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
+            filePath = "Scanner/Screen/PayWall/IAPService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "511"
-            endingLineNumber = "511"
-            landmarkName = "updateFile(item:thumb:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7D3B6B64-2FD0-46B9-B7DE-DFA5F76E5995"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "489"
-            endingLineNumber = "489"
-            landmarkName = "createFile(name:thumb:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "paymentQueue(_:updatedTransactions:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7D3B6B64-2FD0-46B9-B7DE-DFA5F76E5995 - 236cb0301d630687"
+                  uuid = "6A48E79D-B418-474A-A8E0-0B0BD5CD53A3 - aca8b4683892072b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.createFile(name: Swift.String, thumb: __C.UIImage) -&gt; ()"
+                  symbolName = "Scanner.IAPService.paymentQueue(_: __C.SKPaymentQueue, updatedTransactions: Swift.Array&lt;__C.SKPaymentTransaction&gt;) -&gt; ()"
                   moduleName = "Scanner"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "486"
-                  endingLineNumber = "486"
-                  offsetFromSymbolStart = "352">
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "408">
                </Location>
                <Location
-                  uuid = "7D3B6B64-2FD0-46B9-B7DE-DFA5F76E5995 - 236cb0301d630745"
+                  uuid = "6A48E79D-B418-474A-A8E0-0B0BD5CD53A3 - aca8b4683892072b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Scanner.EditViewController.createFile(name: Swift.String, thumb: __C.UIImage) -&gt; ()"
+                  symbolName = "Scanner.IAPService.paymentQueue(_: __C.SKPaymentQueue, updatedTransactions: Swift.Array&lt;__C.SKPaymentTransaction&gt;) -&gt; ()"
                   moduleName = "Scanner"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "488"
-                  endingLineNumber = "488"
-                  offsetFromSymbolStart = "352">
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "344">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -293,81 +263,145 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4C1BC2C7-B33A-4E25-964E-62AECABC4E01"
+            uuid = "EEBA970C-8EA4-49CE-807E-B57D35DD591B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/PayWall/IAPService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "paymentQueue(_:updatedTransactions:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EEBA970C-8EA4-49CE-807E-B57D35DD591B - aca8b46838920769"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scanner.IAPService.paymentQueue(_: __C.SKPaymentQueue, updatedTransactions: Swift.Array&lt;__C.SKPaymentTransaction&gt;) -&gt; ()"
+                  moduleName = "Scanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "EEBA970C-8EA4-49CE-807E-B57D35DD591B - aca8b46838920769"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scanner.IAPService.paymentQueue(_: __C.SKPaymentQueue, updatedTransactions: Swift.Array&lt;__C.SKPaymentTransaction&gt;) -&gt; ()"
+                  moduleName = "Scanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "408">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "183C91AA-2965-4965-A1D1-54608F8188C5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/PayWall/IAPService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "paymentQueue(_:updatedTransactions:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "183C91AA-2965-4965-A1D1-54608F8188C5 - aca8b468389207d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scanner.IAPService.paymentQueue(_: __C.SKPaymentQueue, updatedTransactions: Swift.Array&lt;__C.SKPaymentTransaction&gt;) -&gt; ()"
+                  moduleName = "Scanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "183C91AA-2965-4965-A1D1-54608F8188C5 - aca8b468389207d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scanner.IAPService.paymentQueue(_: __C.SKPaymentQueue, updatedTransactions: Swift.Array&lt;__C.SKPaymentTransaction&gt;) -&gt; ()"
+                  moduleName = "Scanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/PayWall/IAPService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "472">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FCA9D99D-CEE3-4D6F-A1F4-6BAE5DF0D057"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Scanner/Screen/Camera/EditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "saveButtonAction(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "13241EDB-2ECF-4F88-9F04-95A33199A28B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
-            landmarkName = "saveButtonAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B961650F-D6CC-4641-A6D7-39E45770B41E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "245"
-            endingLineNumber = "245"
-            landmarkName = "saveButtonAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E71421EA-9668-4554-AD68-673A5BF536DF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "512"
-            endingLineNumber = "512"
-            landmarkName = "updateFile(item:thumb:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DFDB269D-2658-4FC5-B235-1E01159325C1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Scanner/Screen/Camera/EditViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "513"
-            endingLineNumber = "513"
-            landmarkName = "updateFile(item:thumb:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FCA9D99D-CEE3-4D6F-A1F4-6BAE5DF0D057 - 1af3b3306581b26f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scanner.EditViewController.saveButtonAction(Any) -&gt; ()"
+                  moduleName = "Scanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "243"
+                  endingLineNumber = "243"
+                  offsetFromSymbolStart = "764">
+               </Location>
+               <Location
+                  uuid = "FCA9D99D-CEE3-4D6F-A1F4-6BAE5DF0D057 - 1af3b3306581b26f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scanner.EditViewController.saveButtonAction(Any) -&gt; ()"
+                  moduleName = "Scanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/Camera/EditViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "243"
+                  endingLineNumber = "243"
+                  offsetFromSymbolStart = "504">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

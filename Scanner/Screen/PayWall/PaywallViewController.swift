@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 
 enum PaywallFrom {
     case onboarding
@@ -25,6 +26,7 @@ class PaywallViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        IAPService.shared.getProducts()
     }
     
     init(from: PaywallFrom) {
@@ -61,11 +63,11 @@ class PaywallViewController: UIViewController {
     }
     
     @IBAction func restore(_ sender: UIButton){
-        
+        IAPService.shared.restorPurchases()
     }
     
     @IBAction func subScribe(_ sender: UIButton){
-        
+        IAPService.shared.purChase()
     }
     
     @IBAction func termOfUse(_ sender: UIButton){

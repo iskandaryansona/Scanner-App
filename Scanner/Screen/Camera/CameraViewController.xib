@@ -36,7 +36,7 @@
                                 <action selector="backCamera:" destination="-1" eventType="touchUpInside" id="PhU-eJ-TXD"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9C-O8-B2D">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9C-O8-B2D">
                             <rect key="frame" x="337" y="55" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="5d2-Uh-HXw"/>
