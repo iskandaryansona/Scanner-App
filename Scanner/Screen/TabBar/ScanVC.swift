@@ -60,8 +60,9 @@ extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource, UINaviga
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
         default:
-            if GIDSignIn.sharedInstance.currentUser == nil {
-                
+            if let user = GIDSignIn.sharedInstance.currentUser {
+                fetchFiles(user)
+            }else{
                 GIDSignIn.sharedInstance.signIn(withPresenting: self){user, error in
                     if let error = error {
                         Alert.show(message: error.localizedDescription)

@@ -106,6 +106,7 @@ extension HistoryVC: UICollectionViewDelegate, UICollectionViewDataSource {
         vc.img = a
         vc.name = cell.nameLabel.text!
         vc.isFromHistory = true
+        vc.currentItem = currentData[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

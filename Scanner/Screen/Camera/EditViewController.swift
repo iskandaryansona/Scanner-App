@@ -33,7 +33,7 @@ class EditViewController: UIViewController {
     var move = true
     var isFromHistory = false
     
-    var currentItem = SavedFiles()
+    var currentItem: SavedFiles?
     
     let borderWidth: CGFloat = 1
     let resizersWidth: CGFloat = 6
@@ -141,6 +141,10 @@ class EditViewController: UIViewController {
             editImg.contentMode = .scaleAspectFit
             editImg.image = img
             originalImg = img
+        }else if let imgLink = imgLink {
+            editImg.contentMode = .scaleAspectFit
+            editImg.kf.setImage(with: URL(string: imgLink))
+            originalImg = editImg.image ?? UIImage()
         }
         
         subConvertView.layer.borderWidth = 1
@@ -230,7 +234,9 @@ class EditViewController: UIViewController {
     
     @IBAction func saveButtonAction(_ sender: Any) {
         if isFromHistory {
-            updateFile(item: currentItem, thumb: img!)
+            if let currentItem = currentItem {
+                updateFile(item: currentItem, thumb: img!)
+            }
         } else {
             createFile(name: name, thumb: img!)
         }
@@ -347,22 +353,25 @@ class EditViewController: UIViewController {
         if name == "none" {
             return inputImage
         }
-        let inputCIImage = CIImage(image: inputImage)!
-        
-        let filter = CIFilter(name: name)!
-        filter.setDefaults()
-        filter.setValue(inputCIImage, forKey: kCIInputImageKey)
-        
-        if name == "CIColorControls" {
-            filter.setValue(1.5, forKey: kCIInputContrastKey)
-            filter.setValue(1.2, forKey: kCIInputSaturationKey)
-            filter.setValue(0.0, forKey: kCIInputBrightnessKey)
+        if let img = CIImage(image: inputImage) {
+            let inputCIImage = CIImage(image: inputImage)
+            
+            let filter = CIFilter(name: name)!
+            filter.setDefaults()
+            filter.setValue(inputCIImage, forKey: kCIInputImageKey)
+            
+            if name == "CIColorControls" {
+                filter.setValue(1.5, forKey: kCIInputContrastKey)
+                filter.setValue(1.2, forKey: kCIInputSaturationKey)
+                filter.setValue(0.0, forKey: kCIInputBrightnessKey)
+            }
+            
+            // Get the filtered output image and return it
+            let outputImage = (filter.outputImage ?? inputCIImage)!
+            let resultImage = UIImage(ciImage: outputImage)
+            return resultImage
         }
-
-        // Get the filtered output image and return it
-        let outputImage = filter.outputImage ?? inputCIImage
-        let resultImage = UIImage(ciImage: outputImage)
-        return resultImage
+        return UIImage()
     }
     
     func showConfirmationBar() {

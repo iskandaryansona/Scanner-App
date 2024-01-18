@@ -134,7 +134,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             
             let vc = EditViewController()
 
-            vc.img = uiImage
+            vc.img = uiImage.fixedOrientation()
             self.navigationController?.pushViewController(vc, animated: true)
             
         }

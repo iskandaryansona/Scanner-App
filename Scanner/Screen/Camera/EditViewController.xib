@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,7 +58,8 @@
                                 <constraint firstAttribute="width" constant="40" id="0gc-xx-pqY"/>
                                 <constraint firstAttribute="height" constant="40" id="R2k-2H-IQX"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="camera.back"/>
                             <buttonConfiguration key="configuration" style="plain" image="camera.back"/>
                             <connections>
                                 <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="4VK-3b-AO2"/>
@@ -69,7 +71,8 @@
                                 <constraint firstAttribute="width" constant="40" id="enZ-Ug-Wfr"/>
                                 <constraint firstAttribute="height" constant="40" id="wEp-ix-Jjr"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="icon_save"/>
                             <buttonConfiguration key="configuration" style="plain" image="icon_save"/>
                             <connections>
                                 <action selector="saveButtonAction:" destination="-1" eventType="touchUpInside" id="X4z-Qu-cTj"/>
@@ -81,7 +84,8 @@
                                 <constraint firstAttribute="width" constant="40" id="6mP-oN-Kdt"/>
                                 <constraint firstAttribute="height" constant="40" id="SFV-zx-UPG"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="icon_share"/>
                             <buttonConfiguration key="configuration" style="plain" image="icon_share"/>
                             <connections>
                                 <action selector="shareButtonAction:" destination="-1" eventType="touchUpInside" id="wSg-2M-5lF"/>
@@ -91,7 +95,10 @@
                             <rect key="frame" x="148" y="62" width="96" height="26"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Convert">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <buttonConfiguration key="configuration" style="plain" title="Convert">
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
@@ -119,7 +126,8 @@
                             <rect key="frame" x="82" y="29" width="70" height="73"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="tintColor" red="0.94117647410000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Save"/>
                             <buttonConfiguration key="configuration" style="plain" title="Save"/>
                             <connections>
                                 <action selector="saveSignAction:" destination="-1" eventType="touchUpInside" id="8Ve-f3-qS3"/>
@@ -145,7 +153,8 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJ2-eo-gdg">
                             <rect key="frame" x="39" y="29" width="70" height="73"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="crop"/>
                             <buttonConfiguration key="configuration" style="plain" image="crop"/>
                             <connections>
                                 <action selector="cropAction:" destination="-1" eventType="touchUpInside" id="iHY-IH-Ena"/>
@@ -154,7 +163,8 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXJ-Kf-soh">
                             <rect key="frame" x="161" y="29" width="70" height="73"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="signature"/>
                             <buttonConfiguration key="configuration" style="plain" image="signature"/>
                             <connections>
                                 <action selector="signatureAction:" destination="-1" eventType="touchUpInside" id="Iel-qX-B6v"/>
@@ -163,7 +173,8 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aub-Vm-6la">
                             <rect key="frame" x="278" y="29" width="70" height="73"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="filter"/>
                             <buttonConfiguration key="configuration" style="plain" image="filter"/>
                             <connections>
                                 <action selector="filterAction:" destination="-1" eventType="touchUpInside" id="m9k-VH-pTZ"/>
@@ -195,7 +206,8 @@
                                 <constraint firstAttribute="height" constant="40" id="iiq-Ed-Tat"/>
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Cancel"/>
                             <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                             <connections>
                                 <action selector="convertCancelAction:" destination="-1" eventType="touchUpInside" id="omU-fd-sRc"/>
@@ -209,7 +221,8 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JW-GB-PbJ">
                                             <rect key="frame" x="0.0" y="0.0" width="73.333333333333329" height="60"/>
-                                            <state key="normal" title="Button"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="jpg_icon"/>
                                             <buttonConfiguration key="configuration" style="plain" image="jpg_icon"/>
                                             <connections>
                                                 <action selector="jpgButtonAction:" destination="-1" eventType="touchUpInside" id="C6t-8Q-qu4"/>
@@ -217,7 +230,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxr-m1-vX5">
                                             <rect key="frame" x="73.333333333333343" y="0.0" width="73.333333333333343" height="60"/>
-                                            <state key="normal" title="Button"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="txt_icon"/>
                                             <buttonConfiguration key="configuration" style="plain" image="txt_icon"/>
                                             <connections>
                                                 <action selector="txtButtonAction:" destination="-1" eventType="touchUpInside" id="dXh-dj-qjN"/>
@@ -225,7 +239,8 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6y-q5-4eF">
                                             <rect key="frame" x="146.66666666666669" y="0.0" width="73.333333333333314" height="60"/>
-                                            <state key="normal" title="Button"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="pdf_icon"/>
                                             <buttonConfiguration key="configuration" style="plain" image="pdf_icon"/>
                                             <connections>
                                                 <action selector="pdfButtonAction:" destination="-1" eventType="touchUpInside" id="g8P-Fz-wDJ"/>
@@ -239,7 +254,8 @@
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-0z-xMC">
                                     <rect key="frame" x="144" y="85" width="78" height="74"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="zip_icon"/>
                                     <buttonConfiguration key="configuration" style="plain" image="zip_icon"/>
                                     <connections>
                                         <action selector="convertToZipButtonAction:" destination="-1" eventType="touchUpInside" id="YAb-oC-EoN"/>
@@ -260,7 +276,8 @@
                                 <constraint firstAttribute="height" constant="28" id="doQ-ok-BYz"/>
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Files"/>
                             <buttonConfiguration key="configuration" style="plain" title="Files"/>
                             <connections>
                                 <action selector="filesButtonAction:" destination="-1" eventType="touchUpInside" id="hPy-a9-2DJ"/>
@@ -274,7 +291,8 @@
                                 <constraint firstAttribute="width" constant="78" id="dYe-pM-CLX"/>
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="ZIP"/>
                             <buttonConfiguration key="configuration" style="plain" title="ZIP"/>
                             <connections>
                                 <action selector="zipButtonAction:" destination="-1" eventType="touchUpInside" id="bsI-c0-nHu"/>
