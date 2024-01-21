@@ -13,7 +13,7 @@ enum AppStoreReviewManager {
     }
     
     static func requestReviewInAppStore() {
-        guard let writeReviewURL = URL(string: "https://apps.apple.com/app/id6458876381?action=write-review")
+        guard let writeReviewURL = URL(string: "https://apps.apple.com/app/idhttps://apps.apple.com/app/id6476304078?action=write-review")
             else { fatalError("Expected a valid URL") }
         UIApplication.shared.open(writeReviewURL, options: [:])
 //        let url = URL(string: "")! //"?ls=1&mt=8&action=write-review"

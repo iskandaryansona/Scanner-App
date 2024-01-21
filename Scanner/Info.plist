@@ -15,6 +15,12 @@
 			</array>
 		</dict>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>KaiseiOpti-Regular.ttf</string>
+		<string>KaiseiOpti-Bold.ttf</string>
+		<string>KaiseiOpti-Medium.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

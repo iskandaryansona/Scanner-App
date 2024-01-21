@@ -34,3 +34,19 @@ extension UIButton {
         self.setAttributedTitle(attributeString, for: .normal)
     }
 }
+
+extension UILabel {
+    
+    func underLine(text: String){
+        
+        let yourAttributes: [NSAttributedString.Key: Any] = [
+            .underlineStyle: NSUnderlineStyle.single.rawValue
+        ]
+        
+        let attributeString = NSMutableAttributedString(
+            string: text,
+            attributes: yourAttributes
+        )
+        self.attributedText = attributeString
+    }
+}

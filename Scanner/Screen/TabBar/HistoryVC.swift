@@ -84,6 +84,60 @@ class HistoryVC: UIViewController {
         }
     }
     
+    func deleteFile(item: SavedFiles) {
+        context.delete(item)
+        do {
+            try context.save()
+            getAllFolders()
+        }
+        catch {
+            
+        }
+    }
+    
+    func updateFile(item: SavedFiles, name: String) {
+        item.name = name
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let formattedDate = dateFormatter.string(from: currentDate)
+        item.date = formattedDate
+    
+        do {
+            try context.save()
+        }
+        catch {
+            
+        }
+    }
+    
+}
+
+
+extension HistoryVC: HistoryCellDelegate {
+    func delete(item: SavedFiles) {
+        deleteFile(item: item)
+    }
+    
+    func showRename(for cell: HistoryCell) {
+        let alert = UIAlertController(title: "Some Title", message: "Enter a text", preferredStyle: .alert)
+
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.text = cell.nameLabel.text
+        }
+
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            cell.nameLabel.text = textField?.text
+            self.updateFile(item: cell.item, name: cell.nameLabel.text!)
+        }))
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension HistoryVC: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -96,11 +150,20 @@ extension HistoryVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.nameLabel.text = currentData[currentData.count - 1 - indexPath.row].name ?? "Untitled"
         cell.dateLabel.text = currentData[currentData.count - 1 - indexPath.row].date
         cell.thumb.image = UIImage(data: currentData[currentData.count - 1 - indexPath.row].thumb!)
+        cell.item = currentData[currentData.count - 1 - indexPath.row]
+        cell.delegate = self
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! HistoryCell
+        
+        if cell.isActionMenuVisible {
+            cell.openCloseActionMenu()
+            return
+        }
+        
         let vc = EditViewController()
         let a = cell.thumb.image
         vc.img = a
