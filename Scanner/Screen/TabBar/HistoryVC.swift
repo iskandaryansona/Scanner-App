@@ -115,6 +115,17 @@ class HistoryVC: UIViewController {
 
 
 extension HistoryVC: HistoryCellDelegate {
+    
+    func didTapButton(cell: HistoryCell) {
+           for visibleCell in collectionView.visibleCells {
+               if let otherCell = visibleCell as? HistoryCell, otherCell != cell {
+                   otherCell.actionsMenu.isHidden = true
+               }
+           }
+
+           cell.actionsMenu.isHidden = !cell.actionsMenu.isHidden
+       }
+    
     func delete(item: SavedFiles) {
         deleteFile(item: item)
     }
@@ -159,8 +170,8 @@ extension HistoryVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! HistoryCell
         
-        if cell.isActionMenuVisible {
-            cell.openCloseActionMenu()
+        if !cell.actionsMenu.isHidden {
+            cell.actionsMenu.isHidden = true
             return
         }
         

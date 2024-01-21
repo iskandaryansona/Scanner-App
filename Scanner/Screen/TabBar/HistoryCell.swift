@@ -10,6 +10,7 @@ import UIKit
 protocol HistoryCellDelegate: AnyObject {
     func delete(item: SavedFiles)
     func showRename(for cell: HistoryCell)
+    func didTapButton(cell: HistoryCell)
 }
 
 class HistoryCell: UICollectionViewCell {
@@ -17,7 +18,6 @@ class HistoryCell: UICollectionViewCell {
     static let id = "HistoryCell"
     static let nibName = "HistoryCell"
     
-    var isActionMenuVisible = false
     
     var item: SavedFiles!
     weak var delegate: HistoryCellDelegate?
@@ -40,25 +40,20 @@ class HistoryCell: UICollectionViewCell {
     }
     
     @IBAction func editButtonAction(_ sender: Any) {
-        openCloseActionMenu()
+        delegate?.didTapButton(cell: self)
     }
     
     @IBAction func renameButtonAction(_ sender: Any) {
         showRenameAlert()
+        delegate?.didTapButton(cell: self)
     }
     
     @IBAction func deleteButtonAction(_ sender: Any) {
         delegate?.delete(item: item)
-        openCloseActionMenu()
+        delegate?.didTapButton(cell: self)
     }
     
     func showRenameAlert() {
         delegate?.showRename(for: self)
-        openCloseActionMenu()
-    }
-    
-    func openCloseActionMenu() {
-        actionsMenu.isHidden = isActionMenuVisible
-        isActionMenuVisible.toggle()
     }
 }
