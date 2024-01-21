@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="KaiseiOpti-Regular.ttf">
+            <string>KaiseiOpti-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaywallViewController" customModule="Scanner" customModuleProvider="target">
             <connections>
+                <outlet property="moreInfoLabel" destination="qbz-hu-Vfp" id="XM8-SR-UNq"/>
+                <outlet property="priceLabel" destination="dcM-Zz-OKM" id="kGj-jr-kd1"/>
                 <outlet property="privacePolicyButton" destination="WLO-ne-lJD" id="mu2-N5-MhZ"/>
                 <outlet property="termsOfUseButton" destination="zms-Qv-QNo" id="CM1-O0-ZmE"/>
                 <outlet property="view" destination="0nI-Dp-PXc" id="iWE-Fp-H0n"/>
@@ -60,10 +67,10 @@
                         <action selector="restore:" destination="-1" eventType="touchUpInside" id="vuX-o2-Imn"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="description" translatesAutoresizingMaskIntoConstraints="NO" id="I3l-wd-EDR">
-                    <rect key="frame" x="25" y="173" width="343" height="350"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="description_new" translatesAutoresizingMaskIntoConstraints="NO" id="I3l-wd-EDR">
+                    <rect key="frame" x="25" y="173" width="343" height="270"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="350" id="wOl-jZ-fBQ"/>
+                        <constraint firstAttribute="height" constant="270" id="wOl-jZ-fBQ"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JW6-7X-IK3">
@@ -74,7 +81,9 @@
                     </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Subscribe"/>
+                    <buttonConfiguration key="configuration" style="plain" title="7 DAYS FREE">
+                        <fontDescription key="titleFontDescription" name="KaiseiOpti-Regular" family="Kaisei Opti" pointSize="18"/>
+                    </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="8"/>
@@ -112,30 +121,50 @@
                         <constraint firstAttribute="height" constant="25" id="opD-gu-3p7"/>
                     </constraints>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="after $9.99 / week (auto-renewal)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcM-Zz-OKM">
+                    <rect key="frame" x="0.0" y="568" width="393" height="19"/>
+                    <fontDescription key="fontDescription" name="KaiseiOpti-Regular" family="Kaisei Opti" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1240 people have used the 7-day Trial in the past 24 hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-hu-Vfp">
+                    <rect key="frame" x="0.0" y="656" width="393" height="18"/>
+                    <fontDescription key="fontDescription" name="KaiseiOpti-Regular" family="Kaisei Opti" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="cek-LP-liu"/>
             <color key="backgroundColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="JW6-7X-IK3" firstAttribute="top" secondItem="I3l-wd-EDR" secondAttribute="bottom" constant="72" id="57T-wA-QL2"/>
                 <constraint firstItem="aiK-iy-p2A" firstAttribute="leading" secondItem="cek-LP-liu" secondAttribute="leading" constant="25" id="AfA-Dh-glC"/>
                 <constraint firstItem="nkh-kI-IhK" firstAttribute="leading" secondItem="cek-LP-liu" secondAttribute="leading" constant="25" id="F4K-HK-fa5"/>
+                <constraint firstItem="qbz-hu-Vfp" firstAttribute="top" secondItem="JW6-7X-IK3" secondAttribute="bottom" constant="5" id="HNi-SB-qFV"/>
+                <constraint firstAttribute="bottom" secondItem="JW6-7X-IK3" secondAttribute="bottom" constant="201" id="N8w-fe-ez3"/>
                 <constraint firstItem="ODB-QK-61g" firstAttribute="top" secondItem="nkh-kI-IhK" secondAttribute="top" id="NsN-XE-CON"/>
                 <constraint firstItem="cek-LP-liu" firstAttribute="trailing" secondItem="JW6-7X-IK3" secondAttribute="trailing" constant="25" id="Yuy-NJ-htE"/>
                 <constraint firstItem="nkh-kI-IhK" firstAttribute="top" secondItem="cek-LP-liu" secondAttribute="top" id="ZM0-dr-VRq"/>
+                <constraint firstItem="qbz-hu-Vfp" firstAttribute="trailing" secondItem="cek-LP-liu" secondAttribute="trailing" id="Zk0-Lm-DcT"/>
+                <constraint firstItem="JW6-7X-IK3" firstAttribute="centerX" secondItem="qbz-hu-Vfp" secondAttribute="centerX" id="dBZ-9t-Cvq"/>
                 <constraint firstItem="JW6-7X-IK3" firstAttribute="leading" secondItem="cek-LP-liu" secondAttribute="leading" constant="25" id="ec2-Tv-Nkq"/>
                 <constraint firstItem="I3l-wd-EDR" firstAttribute="top" secondItem="ODB-QK-61g" secondAttribute="bottom" constant="89" id="hMJ-c6-jXX"/>
                 <constraint firstItem="ODB-QK-61g" firstAttribute="centerY" secondItem="nkh-kI-IhK" secondAttribute="centerY" id="hlm-6q-hIw"/>
                 <constraint firstItem="I3l-wd-EDR" firstAttribute="leading" secondItem="cek-LP-liu" secondAttribute="leading" constant="25" id="hxq-U5-EQf"/>
                 <constraint firstItem="cek-LP-liu" firstAttribute="trailing" secondItem="I3l-wd-EDR" secondAttribute="trailing" constant="25" id="iNo-5D-iuO"/>
+                <constraint firstItem="JW6-7X-IK3" firstAttribute="trailing" secondItem="dcM-Zz-OKM" secondAttribute="trailing" constant="-25" id="nly-iR-2gf"/>
+                <constraint firstAttribute="centerX" secondItem="dcM-Zz-OKM" secondAttribute="centerX" id="nnF-F8-Fj5"/>
                 <constraint firstItem="cek-LP-liu" firstAttribute="trailing" secondItem="ODB-QK-61g" secondAttribute="trailing" constant="25" id="p8o-bT-CcL"/>
                 <constraint firstItem="cek-LP-liu" firstAttribute="trailing" secondItem="aiK-iy-p2A" secondAttribute="trailing" constant="25" id="qdN-Gc-qUM"/>
+                <constraint firstItem="dcM-Zz-OKM" firstAttribute="leading" secondItem="JW6-7X-IK3" secondAttribute="leading" constant="-25" id="rBj-B1-OBX"/>
                 <constraint firstItem="cek-LP-liu" firstAttribute="bottom" secondItem="aiK-iy-p2A" secondAttribute="bottom" constant="30" id="tTg-jF-Iet"/>
+                <constraint firstItem="JW6-7X-IK3" firstAttribute="top" secondItem="dcM-Zz-OKM" secondAttribute="bottom" constant="8" id="wO3-g5-6gv"/>
+                <constraint firstItem="qbz-hu-Vfp" firstAttribute="leading" secondItem="cek-LP-liu" secondAttribute="leading" id="zdm-F6-kuN"/>
             </constraints>
-            <point key="canvasLocation" x="-651" y="641"/>
+            <point key="canvasLocation" x="-651.14503816793888" y="640.84507042253529"/>
         </view>
     </objects>
     <resources>
         <image name="close" width="24" height="24"/>
-        <image name="description" width="342" height="356"/>
+        <image name="description_new" width="348" height="250"/>
     </resources>
 </document>

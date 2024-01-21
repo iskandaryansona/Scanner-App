@@ -17,6 +17,8 @@ class PaywallViewController: UIViewController {
 
     @IBOutlet weak var termsOfUseButton: UIButton!
     @IBOutlet weak var privacePolicyButton: UIButton!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var moreInfoLabel: UILabel!
     
     let termsURL = "https://sites.google.com/view/luxescan-terms-of-use"
     let privacyURL = "https://sites.google.com/view/privacypolicy-luxescan?pli=1"
@@ -50,6 +52,10 @@ class PaywallViewController: UIViewController {
         
         termsOfUseButton.underLine(text: "Term of use")
         privacePolicyButton.underLine(text: "Privacy policy")
+        priceLabel.underLine(text: "after $9.99 / week (auto-renewal)")
+//        priceLabel.font = UIFont(name: "KaiseiOpti-Regular", size: 13)
+        moreInfoLabel.underLine(text: "1240 people have used the 7-day Trial in the past 24 hours")
+//        moreInfoLabel.font = UIFont(name: "KaiseiOpti-Regular", size: 12)
     }
     
     @IBAction func closeAction(_ sender: UIButton){
