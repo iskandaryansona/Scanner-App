@@ -227,7 +227,13 @@ class EditViewController: UIViewController {
         shareSheet.popoverPresentationController?.sourceRect = shareBtn.frame
         shareSheet.completionWithItemsHandler = { activity, success, items, error in
             if success {
-                self.createFile(name: self.name, thumb: self.img!)
+                if self.isFromHistory {
+                    if let currentItem = self.currentItem {
+                        self.updateFile(item: currentItem, thumb: self.img!)
+                    }
+                } else {
+                    self.createFile(name: self.name, thumb: self.img!)
+                }
                 self.hideConvertView()
             }
         }

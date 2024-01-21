@@ -53,9 +53,7 @@ class PaywallViewController: UIViewController {
         termsOfUseButton.underLine(text: "Term of use")
         privacePolicyButton.underLine(text: "Privacy policy")
         priceLabel.underLine(text: "after $9.99 / week (auto-renewal)")
-//        priceLabel.font = UIFont(name: "KaiseiOpti-Regular", size: 13)
         moreInfoLabel.underLine(text: "1240 people have used the 7-day Trial in the past 24 hours")
-//        moreInfoLabel.font = UIFont(name: "KaiseiOpti-Regular", size: 12)
     }
     
     @IBAction func closeAction(_ sender: UIButton){

@@ -50,6 +50,19 @@ extension SettingsVC: UICollectionViewDelegate, UICollectionViewDataSource{
             let vc = PaywallViewController(from: .main)
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
+        case 1:
+            //TODO- Link doesn't working
+            print("1")
+        case 2:
+            AppStoreReviewManager.requestReviewInAppStore()
+        case 3:
+            let productURL = "https://apps.apple.com/app/id6476304078"
+            let image = UIImage(named: "AppIcon")!
+            let activityViewController = UIActivityViewController(
+              activityItems: [productURL, image],
+              applicationActivities: nil)
+
+            present(activityViewController, animated: true, completion: nil)
         case 4:
             let vc = WebViewController()
             self.present(vc, animated: true)

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,14 +20,12 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uce-7N-FVd">
-                    <rect key="frame" x="0.0" y="365" width="393" height="487"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uce-7N-FVd">
+                    <rect key="frame" x="0.0" y="326" width="393" height="526"/>
                     <color key="backgroundColor" red="0.94117647410000005" green="0.94117647410000005" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cK4-Ac-8MC" customClass="DrawingView" customModule="Scanner" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="365" width="393" height="357"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cK4-Ac-8MC" customClass="DrawingView" customModule="Scanner" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="326" width="393" height="396"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="laye.cornerRadius">
@@ -37,31 +36,39 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wal-32-Zew">
-                    <rect key="frame" x="10" y="375" width="68" height="37"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wal-32-Zew">
+                    <rect key="frame" x="10" y="341" width="70" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Qvm-xj-9pc"/>
+                        <constraint firstAttribute="width" constant="70" id="R7y-WL-daq"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Reset"/>
                     <connections>
                         <action selector="clearButtonAction:" destination="-1" eventType="touchUpInside" id="8ON-JV-Pw5"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" id="1eM-Vs-fvP">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eM-Vs-fvP">
                     <rect key="frame" x="0.0" y="722" width="393" height="130"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9v2-E0-4VL">
-                            <rect key="frame" x="8" y="47" width="77" height="37"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9v2-E0-4VL">
+                            <rect key="frame" x="10" y="30" width="77" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="BQx-FR-wFQ"/>
+                                <constraint firstAttribute="width" constant="77" id="Vdk-OY-7CU"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                             <connections>
                                 <action selector="cancelButtonAction:" destination="-1" eventType="touchUpInside" id="PLY-Qr-VVL"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXo-Js-AiL">
-                            <rect key="frame" x="307" y="46" width="78" height="37"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXo-Js-AiL">
+                            <rect key="frame" x="305" y="30" width="78" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="78" id="bla-55-OVm"/>
+                                <constraint firstAttribute="height" constant="37" id="h9w-mt-kfu"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Submit"/>
                             <connections>
@@ -71,9 +78,31 @@
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="WvU-AG-pzM"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="WvU-AG-pzM" firstAttribute="trailing" secondItem="LXo-Js-AiL" secondAttribute="trailing" constant="10" id="7yg-gO-bCB"/>
+                        <constraint firstItem="9v2-E0-4VL" firstAttribute="leading" secondItem="WvU-AG-pzM" secondAttribute="leading" constant="10" id="9mH-Fm-vJi"/>
+                        <constraint firstItem="LXo-Js-AiL" firstAttribute="top" secondItem="WvU-AG-pzM" secondAttribute="top" constant="30" id="baa-5K-ZaG"/>
+                        <constraint firstItem="9v2-E0-4VL" firstAttribute="top" secondItem="WvU-AG-pzM" secondAttribute="top" constant="30" id="smX-lm-487"/>
+                        <constraint firstAttribute="height" constant="130" id="uiU-tH-726"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstItem="cK4-Ac-8MC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="7OM-i3-Yx3"/>
+                <constraint firstItem="cK4-Ac-8MC" firstAttribute="top" secondItem="Uce-7N-FVd" secondAttribute="top" id="9tk-wf-wSi"/>
+                <constraint firstItem="Uce-7N-FVd" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ags-mB-WUg"/>
+                <constraint firstItem="Uce-7N-FVd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Gpl-Df-gkA"/>
+                <constraint firstItem="wal-32-Zew" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="RpG-Wa-AtI"/>
+                <constraint firstItem="Uce-7N-FVd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="SEr-m8-3zp"/>
+                <constraint firstItem="1eM-Vs-fvP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SOK-bx-yfu"/>
+                <constraint firstItem="1eM-Vs-fvP" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="UQ0-tM-FCx"/>
+                <constraint firstAttribute="bottom" secondItem="1eM-Vs-fvP" secondAttribute="bottom" id="cSp-WV-UMT"/>
+                <constraint firstItem="1eM-Vs-fvP" firstAttribute="top" secondItem="cK4-Ac-8MC" secondAttribute="bottom" id="fzU-X2-smF"/>
+                <constraint firstItem="wal-32-Zew" firstAttribute="top" secondItem="Uce-7N-FVd" secondAttribute="top" constant="15" id="lXh-PX-iGG"/>
+                <constraint firstAttribute="bottom" secondItem="Uce-7N-FVd" secondAttribute="bottom" id="t6p-9D-rdn"/>
+                <constraint firstItem="cK4-Ac-8MC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="z3I-Uu-uVM"/>
+            </constraints>
             <point key="canvasLocation" x="125.95419847328243" y="29.577464788732396"/>
         </view>
     </objects>
