@@ -11,6 +11,7 @@ class SettingsVC: UIViewController {
     
     var imgArr:[String] = ["settings.premium","settings.feedback","settings.rate","settings.share","settings.privacy"]
     let privacyURL = "https://sites.google.com/view/privacypolicy-luxescan?pli=1"
+    let feedBackUrl = "https://sites.google.com/view/supp-ukrenergoholdyng"
 
     @IBOutlet weak var settingsCollection: UICollectionView!
     
@@ -51,8 +52,9 @@ extension SettingsVC: UICollectionViewDelegate, UICollectionViewDataSource{
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
         case 1:
-            //TODO- Link doesn't working
-            print("1")
+            let vc = WebViewController()
+            self.present(vc, animated: true)
+            vc.showUrl(link: feedBackUrl)
         case 2:
             AppStoreReviewManager.requestReviewInAppStore()
         case 3:
