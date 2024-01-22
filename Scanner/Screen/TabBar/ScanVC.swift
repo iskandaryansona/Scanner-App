@@ -34,6 +34,11 @@ class ScanVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func showPaywall() {
+        let vc = PaywallViewController(from: .main)
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
 }
 
 extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate {
@@ -48,31 +53,35 @@ extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource, UINaviga
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.item {
-        case 0:
-            let vc = CameraViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
-        case 1:
-            let vc = UIImagePickerController()
-            vc.sourceType = .photoLibrary
-            vc.delegate = self
-            vc.allowsEditing = false
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true)
-        default:
-            if let user = GIDSignIn.sharedInstance.currentUser {
-                fetchFiles(user)
-            }else{
-                GIDSignIn.sharedInstance.signIn(withPresenting: self){user, error in
-                    if let error = error {
-                        Alert.show(message: error.localizedDescription)
-                    }else{
-                        if let user = user {
-                            self.fetchFiles(user.user)
+        if isSubscribed {
+            switch indexPath.item {
+            case 0:
+                let vc = CameraViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            case 1:
+                let vc = UIImagePickerController()
+                vc.sourceType = .photoLibrary
+                vc.delegate = self
+                vc.allowsEditing = false
+                vc.modalPresentationStyle = .fullScreen
+                present(vc, animated: true)
+            default:
+                if let user = GIDSignIn.sharedInstance.currentUser {
+                    fetchFiles(user)
+                }else{
+                    GIDSignIn.sharedInstance.signIn(withPresenting: self){user, error in
+                        if let error = error {
+                            Alert.show(message: error.localizedDescription)
+                        }else{
+                            if let user = user {
+                                self.fetchFiles(user.user)
+                            }
                         }
                     }
                 }
             }
+        } else {
+            showPaywall()
         }
         return
     }

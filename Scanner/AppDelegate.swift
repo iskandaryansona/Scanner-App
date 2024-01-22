@@ -9,6 +9,8 @@ import UIKit
 import GoogleSignIn
 import CoreData
 
+var isSubscribed = UserDefaults.standard.bool(forKey: "isSubscribed")
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,6 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = GIDConfiguration(clientID: "640609218903-mivqemk73799nol36lelp1o4ei2rrr0k.apps.googleusercontent.com")
         
         GIDSignIn.sharedInstance.configuration = config
+        
+        if let receiptURL = Bundle.main.appStoreReceiptURL,
+            let receiptData = try? Data(contentsOf: receiptURL) {
+            // Verify the receipt data with your server to ensure its validity and check the subscription status.
+            // For a real-world application, you would usually use a server for receipt validation.
+            UserDefaults.standard.setValue(true, forKey: "isSubscribed")
+            print("Receipt data: \(receiptData.base64EncodedString())")
+        }
         
         return true
     }

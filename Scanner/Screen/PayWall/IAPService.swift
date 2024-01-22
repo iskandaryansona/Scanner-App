@@ -13,6 +13,8 @@ class IAPService: NSObject{
     
     static let shared = IAPService()
     
+    weak var delegate: PaywallDelegate?
+    
     var myProduct: SKProduct?
     let paymentQueue = SKPaymentQueue.default()
     var request: SKProductsRequest?
@@ -54,15 +56,19 @@ extension IAPService: SKProductsRequestDelegate {
 extension IAPService: SKPaymentTransactionObserver{
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions{
-            switch  transaction.transactionState{
+            switch transaction.transactionState{
             case .purchasing:
                 break
             case .purchased:
                 SKPaymentQueue.default().finishTransaction(transaction)
+                isSubscribed = true
+                delegate?.close()
             case .failed, .deferred:
                 SKPaymentQueue.default().finishTransaction(transaction)
             case .restored:
                 SKPaymentQueue.default().finishTransaction(transaction)
+                isSubscribed = true
+                delegate?.close()
             @unknown default:
                 SKPaymentQueue.default().finishTransaction(transaction)
             }

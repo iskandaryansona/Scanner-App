@@ -13,6 +13,10 @@ enum PaywallFrom {
     case main
 }
 
+protocol PaywallDelegate: AnyObject {
+    func close()
+}
+
 class PaywallViewController: UIViewController {
 
     @IBOutlet weak var termsOfUseButton: UIButton!
@@ -29,6 +33,7 @@ class PaywallViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         IAPService.shared.getProducts()
+        IAPService.shared.delegate = self
     }
     
     init(from: PaywallFrom) {
@@ -57,13 +62,7 @@ class PaywallViewController: UIViewController {
     }
     
     @IBAction func closeAction(_ sender: UIButton){
-        if from == .onboarding {
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "AppTabBarController") as! AppTabBarController
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else {
-            self.dismiss(animated: true)
-        }
+        closePaywall()
     }
     
     @IBAction func restore(_ sender: UIButton){
@@ -86,4 +85,19 @@ class PaywallViewController: UIViewController {
         vc.showUrl(link: privacyURL)
     }
 
+    func closePaywall() {
+        if from == .onboarding {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AppTabBarController") as! AppTabBarController
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            self.dismiss(animated: true)
+        }
+    }
+}
+
+extension PaywallViewController: PaywallDelegate {
+    func close() {
+        closePaywall()
+    }
 }
