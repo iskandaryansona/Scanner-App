@@ -4,21 +4,7 @@
 
   ],
   "products" : [
-    {
-      "displayPrice" : "9.99",
-      "familyShareable" : false,
-      "internalID" : "42C0838A",
-      "localizations" : [
-        {
-          "description" : "",
-          "displayName" : "",
-          "locale" : "en_US"
-        }
-      ],
-      "productID" : "app.buy.luxe.scanner",
-      "referenceName" : "luxeScanner",
-      "type" : "NonConsumable"
-    }
+
   ],
   "settings" : {
     "_failTransactionsEnabled" : false,
@@ -73,7 +59,44 @@
     ]
   },
   "subscriptionGroups" : [
+    {
+      "id" : "0F9232B3",
+      "localizations" : [
 
+      ],
+      "name" : "Luxe Scanner",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "9.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "E10DA15F",
+          "introductoryOffer" : {
+            "internalID" : "34654569",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "app.buy.luxe.scanner",
+          "recurringSubscriptionPeriod" : "P1W",
+          "referenceName" : "luxeScanner",
+          "subscriptionGroupID" : "0F9232B3",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
   ],
   "version" : {
     "major" : 3,
