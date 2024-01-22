@@ -24,9 +24,9 @@ class EditViewController: UIViewController {
     @IBOutlet weak var subConvertView: UIView!
     @IBOutlet weak var convertCancelButton: UIButton!
     @IBOutlet weak var filesButton: UIButton!
-    @IBOutlet weak var zipButton: UIButton!
+//    @IBOutlet weak var zipButton: UIButton!
     @IBOutlet weak var docTypeStack: UIStackView!
-    @IBOutlet weak var zipTypeButton: UIButton!
+//    @IBOutlet weak var zipTypeButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
     
@@ -175,9 +175,9 @@ class EditViewController: UIViewController {
         filesButton.layer.borderColor = UIColor(red: 123/255, green: 155/255, blue: 190/255, alpha: 1).cgColor
         filesButton.layer.cornerRadius = 14
         
-        zipButton.layer.borderWidth = 1
-        zipButton.layer.borderColor = UIColor(red: 123/255, green: 155/255, blue: 190/255, alpha: 1).cgColor
-        zipButton.layer.cornerRadius = 14
+//        zipButton.layer.borderWidth = 1
+//        zipButton.layer.borderColor = UIColor(red: 123/255, green: 155/255, blue: 190/255, alpha: 1).cgColor
+//        zipButton.layer.cornerRadius = 14
         
         convertCancelButton.layer.borderWidth = 1
         convertCancelButton.layer.borderColor = UIColor(red: 123/255, green: 155/255, blue: 190/255, alpha: 1).cgColor
@@ -273,18 +273,18 @@ class EditViewController: UIViewController {
     
     @IBAction func filesButtonAction(_ sender: Any) {
         filesButton.backgroundColor = typeActiveColor
-        zipButton.backgroundColor = typeInactiveColor
-        zipTypeButton.isHidden = true
+//        zipButton.backgroundColor = typeInactiveColor
+//        zipTypeButton.isHidden = true
         docTypeStack.isHidden = false
     }
     
-    @IBAction func zipButtonAction(_ sender: Any) {
-        filesButton.backgroundColor = typeInactiveColor
-        zipButton.backgroundColor = typeActiveColor
-        zipTypeButton.isHidden = false
-        docTypeStack.isHidden = true
-    }
-    
+//    @IBAction func zipButtonAction(_ sender: Any) {
+//        filesButton.backgroundColor = typeInactiveColor
+////        zipButton.backgroundColor = typeActiveColor
+////        zipTypeButton.isHidden = false
+//        docTypeStack.isHidden = true
+//    }
+
     @IBAction func jpgButtonAction(_ sender: Any) {
         let data = convertPNGtoJPEG(pngImage: img!)
         showShareSheet(sender: sender, file: data)
@@ -329,11 +329,11 @@ class EditViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func convertToZipButtonAction(_ sender: Any) {
-        let a = img!.jpegData(compressionQuality: 0.1)
-        showShareSheet(sender: sender, file: a)
-    }
-    
+//    @IBAction func convertToZipButtonAction(_ sender: Any) {
+//        let a = img!.jpegData(compressionQuality: 0.1)
+//        showShareSheet(sender: sender, file: a)
+//    }
+//    
     
     @IBAction func cropAction(_ sender: Any) {
         let vc = CropViewController(croppingStyle: .default, image: img!)

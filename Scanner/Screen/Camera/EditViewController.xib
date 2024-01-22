@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,8 +25,6 @@
                 <outlet property="shareButton" destination="BKc-26-HAx" id="u31-EE-ZGj"/>
                 <outlet property="subConvertView" destination="QjH-Oj-vw3" id="wok-5x-mE7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="zipButton" destination="9nv-xZ-ce5" id="lGc-ed-5kf"/>
-                <outlet property="zipTypeButton" destination="Fzo-0z-xMC" id="Gsa-9K-Q59"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -291,16 +289,6 @@
                                         <constraint firstAttribute="width" constant="220" id="CF3-IL-gVD"/>
                                     </constraints>
                                 </stackView>
-                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-0z-xMC">
-                                    <rect key="frame" x="144" y="85" width="78" height="74"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" image="zip_icon"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="zip_icon"/>
-                                    <connections>
-                                        <action selector="convertToZipButtonAction:" destination="-1" eventType="touchUpInside" id="YAb-oC-EoN"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.14901961389999999" green="0.15294116739999999" blue="0.1764705926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
@@ -309,7 +297,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHx-rK-wWV">
-                            <rect key="frame" x="106.66666666666669" y="0.0" width="78" height="28"/>
+                            <rect key="frame" x="157.66666666666666" y="0.0" width="78" height="28"/>
                             <color key="backgroundColor" red="0.30196079609999998" green="0.62745100259999997" blue="0.90980386729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="78" id="AxZ-rI-Wyf"/>
@@ -323,32 +311,15 @@
                                 <action selector="filesButtonAction:" destination="-1" eventType="touchUpInside" id="hPy-a9-2DJ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nv-xZ-ce5">
-                            <rect key="frame" x="208.66666666666666" y="0.0" width="77.999999999999972" height="28"/>
-                            <color key="backgroundColor" red="0.14901961389999999" green="0.15294116739999999" blue="0.1764705926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="28" id="U1D-f7-VBn"/>
-                                <constraint firstAttribute="width" constant="78" id="dYe-pM-CLX"/>
-                            </constraints>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="ZIP"/>
-                            <buttonConfiguration key="configuration" style="plain" title="ZIP"/>
-                            <connections>
-                                <action selector="zipButtonAction:" destination="-1" eventType="touchUpInside" id="bsI-c0-nHu"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="QjH-Oj-vw3" firstAttribute="top" secondItem="yFJ-qz-bic" secondAttribute="top" constant="14" id="1eP-ei-9pZ"/>
                         <constraint firstItem="cHx-rK-wWV" firstAttribute="top" secondItem="yFJ-qz-bic" secondAttribute="top" id="OGo-eQ-Vjw"/>
+                        <constraint firstItem="cHx-rK-wWV" firstAttribute="centerX" secondItem="yFJ-qz-bic" secondAttribute="centerX" id="VNj-JJ-fLA"/>
                         <constraint firstItem="t5i-OO-Q2o" firstAttribute="top" secondItem="QjH-Oj-vw3" secondAttribute="bottom" constant="10" id="XuW-RH-X1F"/>
-                        <constraint firstItem="9nv-xZ-ce5" firstAttribute="leading" secondItem="yFJ-qz-bic" secondAttribute="centerX" constant="12" id="YGG-L9-tbN"/>
-                        <constraint firstAttribute="centerX" secondItem="cHx-rK-wWV" secondAttribute="trailing" constant="12" id="Ya2-iF-a6S"/>
                         <constraint firstItem="QjH-Oj-vw3" firstAttribute="leading" secondItem="yFJ-qz-bic" secondAttribute="leading" constant="13" id="YiQ-pN-e6R"/>
                         <constraint firstAttribute="bottom" secondItem="t5i-OO-Q2o" secondAttribute="bottom" constant="33" id="ZEi-cv-ysx"/>
-                        <constraint firstItem="9nv-xZ-ce5" firstAttribute="top" secondItem="yFJ-qz-bic" secondAttribute="top" id="m9n-3h-OdO"/>
                         <constraint firstAttribute="centerX" secondItem="t5i-OO-Q2o" secondAttribute="centerX" id="moC-O5-NWH"/>
                         <constraint firstAttribute="trailing" secondItem="QjH-Oj-vw3" secondAttribute="trailing" constant="13" id="vEd-Oi-aaM"/>
                     </constraints>
@@ -394,6 +365,5 @@
         <image name="pdf_icon" width="45" height="59"/>
         <image name="signature" width="75.333335876464844" height="73"/>
         <image name="txt_icon" width="50" height="59"/>
-        <image name="zip_icon" width="54" height="60"/>
     </resources>
 </document>

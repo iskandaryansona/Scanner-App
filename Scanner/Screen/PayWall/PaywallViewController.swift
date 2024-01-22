@@ -46,7 +46,7 @@ class PaywallViewController: UIViewController {
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
-        gradientLayer.frame = self.view.bounds
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         
         self.view.layer.insertSublayer(gradientLayer, at:0)
         
