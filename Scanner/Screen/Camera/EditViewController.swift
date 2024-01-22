@@ -91,6 +91,19 @@ class EditViewController: UIViewController {
         self.movableView.addGestureRecognizer(pinchGesture)
         self.movableView.addGestureRecognizer(rotationGesture)
         
+        showRateUs()
+    }
+    
+    func showRateUs(){
+        let isFirst : Bool = UserDefaults.standard.bool(forKey: "firstTime")
+        
+        if !isFirst {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                AppStoreReviewManager.requestReviewIfAppropriate()
+                UserDefaults.standard.setValue(true, forKey: "firstTime")
+            }
+        }
+        
     }
     
     @objc func handlePan(_ sender: UIPanGestureRecognizer) {

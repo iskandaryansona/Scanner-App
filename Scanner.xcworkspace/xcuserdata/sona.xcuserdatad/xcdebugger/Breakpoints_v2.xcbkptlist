@@ -402,6 +402,38 @@
             endingLineNumber = "121"
             landmarkName = "didTapButton(cell:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EDD352AF-1566-4CBB-B64D-87065447B78A - b810c800146e9325"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scanner.HistoryVC.didTapButton(cell: Scanner.HistoryCell) -&gt; ()"
+                  moduleName = "Scanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/TabBar/HistoryVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "432">
+               </Location>
+               <Location
+                  uuid = "EDD352AF-1566-4CBB-B64D-87065447B78A - b810c800146e9325"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Scanner.HistoryVC.didTapButton(cell: Scanner.HistoryCell) -&gt; ()"
+                  moduleName = "Scanner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sona/Documents/GitHub/Scanner/Scanner/Screen/TabBar/HistoryVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "584">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -433,6 +465,38 @@
             startingLineNumber = "178"
             endingLineNumber = "178"
             landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF5993F2-BD10-43C9-A0F4-24A49882CD88"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/Camera/EditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "showRateUs()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "932A943B-1EED-4975-A53B-E3EBFD38BAAC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Scanner/Screen/Camera/EditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "showRateUs()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
