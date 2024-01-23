@@ -12,6 +12,7 @@ target 'Scanner' do
  pod ‘GoogleSignIn’
  pod 'Kingfisher'
  pod 'SVPullToRefresh'
+ pod 'YandexMobileMetrica', '4.5.2'
 
 end
 

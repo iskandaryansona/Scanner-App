@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import StoreKit
+import YandexMobileMetrica
 
 class IAPService: NSObject{
     
@@ -43,6 +44,45 @@ class IAPService: NSObject{
         }
     }
     
+    func completeTransaction(_ transaction: SKPaymentTransaction) {
+        
+        let price = NSDecimalNumber(string: "$9.99")
+        // Initializing the Revenue instance.
+        let revenueInfo = YMMMutableRevenueInfo.init(priceDecimal: price, currency: "BYN")
+        revenueInfo.productID = "Luxe Scanner"
+        revenueInfo.quantity = 2
+        revenueInfo.payload = ["source": "AppStore"]
+        // Set purchase information for validation.
+        if let url = Bundle.main.appStoreReceiptURL, let data = try? Data(contentsOf: url), let transactionID = transaction.transactionIdentifier {
+            revenueInfo.transactionID = transactionID
+            revenueInfo.receiptData = data
+        }
+        // Sending the Revenue instance using reporter.
+        let reporter = YMMYandexMetrica.reporter(forApiKey: yandexMetricaID)
+        reporter?.reportRevenue(revenueInfo, onFailure: { (error) in
+            print("REPORT ERROR: \(error.localizedDescription)")
+        })
+        // Remove the transaction from the payment queue.
+        SKPaymentQueue.default().finishTransaction(transaction)
+    }
+    
+    func trackTrialSubscriptionEvent() {
+        let eventName = "Trial_Subscription_Event"
+        let parameters: [String: Any] = [
+            "Subscription_Type": "Trial"]
+        YMMYandexMetrica.reportEvent(eventName, parameters: parameters, onFailure: { (error) in
+            print("Failed to report event: \(error.localizedDescription)")
+        })
+    }
+    
+    private func handlePurchase(_ transaction: SKPaymentTransaction) {
+        if let product = myProduct, product.introductoryPrice?.paymentMode == .freeTrial {
+             trackTrialSubscriptionEvent()
+         } else {
+             completeTransaction(transaction)
+         }
+     }
+    
 }
 
 extension IAPService: SKProductsRequestDelegate {
@@ -63,6 +103,7 @@ extension IAPService: SKPaymentTransactionObserver{
                 SKPaymentQueue.default().finishTransaction(transaction)
                 isSubscribed = true
                 delegate?.close()
+                handlePurchase(transaction)
             case .failed, .deferred:
                 SKPaymentQueue.default().finishTransaction(transaction)
             case .restored:

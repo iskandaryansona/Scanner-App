@@ -8,15 +8,17 @@
 import UIKit
 import GoogleSignIn
 import CoreData
+import YandexMobileMetrica
 
 var isSubscribed = UserDefaults.standard.bool(forKey: "isSubscribed")
+var yandexMetricaID = "640609218903-mivqemk73799nol36lelp1o4ei2rrr0k.apps.googleusercontent.com"
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let config = GIDConfiguration(clientID: "640609218903-mivqemk73799nol36lelp1o4ei2rrr0k.apps.googleusercontent.com")
+        let config = GIDConfiguration(clientID: yandexMetricaID)
         
         GIDSignIn.sharedInstance.configuration = config
         
@@ -27,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.setValue(true, forKey: "isSubscribed")
             print("Receipt data: \(receiptData.base64EncodedString())")
         }
+        
+        let configuration = YMMYandexMetricaConfiguration.init(apiKey: "1e7e2873-dd69-4bee-95d2-3e185e274952")
+        YMMYandexMetrica.activate(with: configuration!)
         
         return true
     }

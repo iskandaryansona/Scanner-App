@@ -25,6 +25,14 @@ PODS:
   - ImageSlideshow/Core (1.9.2)
   - Kingfisher (7.9.1)
   - SVPullToRefresh (0.4.1)
+  - YandexMobileMetrica (4.5.2):
+    - YandexMobileMetrica/Static (= 4.5.2)
+  - YandexMobileMetrica/Static (4.5.2):
+    - YandexMobileMetrica/Static/Core (= 4.5.2)
+    - YandexMobileMetrica/Static/Crashes (= 4.5.2)
+  - YandexMobileMetrica/Static/Core (4.5.2)
+  - YandexMobileMetrica/Static/Crashes (4.5.2):
+    - YandexMobileMetrica/Static/Core
 
 DEPENDENCIES:
   - GoogleAPIClientForREST/Drive
@@ -32,6 +40,7 @@ DEPENDENCIES:
   - ImageSlideshow
   - Kingfisher
   - SVPullToRefresh
+  - YandexMobileMetrica (= 4.5.2)
 
 SPEC REPOS:
   trunk:
@@ -43,6 +52,7 @@ SPEC REPOS:
     - ImageSlideshow
     - Kingfisher
     - SVPullToRefresh
+    - YandexMobileMetrica
 
 SPEC CHECKSUMS:
   AppAuth: 3bb1d1cd9340bd09f5ed189fb00b1cc28e1e8570
@@ -53,7 +63,8 @@ SPEC CHECKSUMS:
   ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   Kingfisher: 1d14e9f59cbe19389f591c929000332bf70efd32
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  YandexMobileMetrica: f5368ee93f286c793d73b58da00929babfc897c1
 
-PODFILE CHECKSUM: 87a4e084b6fa1f1940bd0d060d02946a16ce258e
+PODFILE CHECKSUM: 3cde3608b7dea09c5b57befa2036f10ce95804c5
 
 COCOAPODS: 1.13.0
