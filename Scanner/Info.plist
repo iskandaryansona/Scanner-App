@@ -21,6 +21,8 @@
 		<string>KaiseiOpti-Bold.ttf</string>
 		<string>KaiseiOpti-Medium.ttf</string>
 	</array>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>We require access to your data to provide personalized recommendations and tailored advertisements that match your interests. By analyzing your app usage patterns and preferences, we can offer you a more personalized and engaging experience. Rest assured that your data is securely handled and anonymized to protect your privacy.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
