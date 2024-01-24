@@ -108,13 +108,13 @@ class AppTabBarController: UITabBarController, UITabBarControllerDelegate{
         
         self.tabBar.frame.size.width = 100
         
-        let elipse = UIView(frame: CGRect(x: 25, y: -8, width: self.view.bounds.width - 50, height: 66))
+        let elipse = UIView(frame: CGRect(x: 25, y: -8, width: self.view.bounds.width - 50, height: view.bounds.height / 12.5))
         elipse.backgroundColor = UIColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 1)
         elipse.layer.cornerRadius = 16
         
         self.tabBar.addSubview(elipse)
         
-        self.tabBar.bounds = self.tabBar.bounds.inset(by: UIEdgeInsets(top: -10, left: 0, bottom: 0, right: 0))
+        self.tabBar.bounds = self.tabBar.bounds.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: -10, right: 0))
         
         //           self.view.addSubview(backgroundView)
         

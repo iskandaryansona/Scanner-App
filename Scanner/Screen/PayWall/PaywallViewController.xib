@@ -67,8 +67,9 @@
                         <action selector="restore:" destination="-1" eventType="touchUpInside" id="vuX-o2-Imn"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="description_new" translatesAutoresizingMaskIntoConstraints="NO" id="I3l-wd-EDR">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="description_new" id="I3l-wd-EDR">
                     <rect key="frame" x="25" y="173" width="343" height="270"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="270" id="wOl-jZ-fBQ"/>
                     </constraints>
@@ -81,7 +82,7 @@
                     </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="7 DAYS FREE">
+                    <buttonConfiguration key="configuration" style="plain" title="CONTINUE">
                         <fontDescription key="titleFontDescription" name="KaiseiOpti-Regular" family="Kaisei Opti" pointSize="17"/>
                     </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
@@ -118,6 +119,7 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="341" id="cFc-d6-NVV"/>
                         <constraint firstAttribute="height" constant="25" id="opD-gu-3p7"/>
                     </constraints>
                 </stackView>
@@ -127,9 +129,9 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1240 people have used the 7-day Trial in the past 24 hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-hu-Vfp">
-                    <rect key="frame" x="0.0" y="656" width="393" height="17.666666666666629"/>
-                    <fontDescription key="fontDescription" name="KaiseiOpti-Regular" family="Kaisei Opti" pointSize="12"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Days Free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-hu-Vfp">
+                    <rect key="frame" x="0.0" y="656" width="393" height="24.666666666666629"/>
+                    <fontDescription key="fontDescription" name="KaiseiOpti-Regular" family="Kaisei Opti" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -142,6 +144,8 @@
                 <constraint firstItem="qbz-hu-Vfp" firstAttribute="top" secondItem="JW6-7X-IK3" secondAttribute="bottom" constant="5" id="HNi-SB-qFV"/>
                 <constraint firstAttribute="bottom" secondItem="JW6-7X-IK3" secondAttribute="bottom" constant="201" id="N8w-fe-ez3"/>
                 <constraint firstItem="ODB-QK-61g" firstAttribute="top" secondItem="nkh-kI-IhK" secondAttribute="top" id="NsN-XE-CON"/>
+                <constraint firstItem="cek-LP-liu" firstAttribute="trailing" secondItem="aiK-iy-p2A" secondAttribute="trailing" constant="25" id="WQk-oR-fPk"/>
+                <constraint firstItem="dcM-Zz-OKM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I3l-wd-EDR" secondAttribute="bottom" constant="-15" id="YpE-Q6-Xti"/>
                 <constraint firstItem="cek-LP-liu" firstAttribute="trailing" secondItem="JW6-7X-IK3" secondAttribute="trailing" constant="25" id="Yuy-NJ-htE"/>
                 <constraint firstItem="nkh-kI-IhK" firstAttribute="top" secondItem="cek-LP-liu" secondAttribute="top" id="ZM0-dr-VRq"/>
                 <constraint firstItem="qbz-hu-Vfp" firstAttribute="trailing" secondItem="cek-LP-liu" secondAttribute="trailing" id="Zk0-Lm-DcT"/>
@@ -151,12 +155,13 @@
                 <constraint firstItem="ODB-QK-61g" firstAttribute="centerY" secondItem="nkh-kI-IhK" secondAttribute="centerY" id="hlm-6q-hIw"/>
                 <constraint firstItem="I3l-wd-EDR" firstAttribute="leading" secondItem="cek-LP-liu" secondAttribute="leading" constant="25" id="hxq-U5-EQf"/>
                 <constraint firstItem="cek-LP-liu" firstAttribute="trailing" secondItem="I3l-wd-EDR" secondAttribute="trailing" constant="25" id="iNo-5D-iuO"/>
+                <constraint firstItem="cek-LP-liu" firstAttribute="bottom" secondItem="aiK-iy-p2A" secondAttribute="bottom" constant="30" id="jcQ-8g-XDL"/>
                 <constraint firstItem="JW6-7X-IK3" firstAttribute="trailing" secondItem="dcM-Zz-OKM" secondAttribute="trailing" constant="-25" id="nly-iR-2gf"/>
                 <constraint firstAttribute="centerX" secondItem="dcM-Zz-OKM" secondAttribute="centerX" id="nnF-F8-Fj5"/>
                 <constraint firstItem="cek-LP-liu" firstAttribute="trailing" secondItem="ODB-QK-61g" secondAttribute="trailing" constant="25" id="p8o-bT-CcL"/>
                 <constraint firstItem="cek-LP-liu" firstAttribute="trailing" secondItem="aiK-iy-p2A" secondAttribute="trailing" constant="25" id="qdN-Gc-qUM"/>
                 <constraint firstItem="dcM-Zz-OKM" firstAttribute="leading" secondItem="JW6-7X-IK3" secondAttribute="leading" constant="-25" id="rBj-B1-OBX"/>
-                <constraint firstItem="cek-LP-liu" firstAttribute="bottom" secondItem="aiK-iy-p2A" secondAttribute="bottom" constant="30" id="tTg-jF-Iet"/>
+                <constraint firstItem="aiK-iy-p2A" firstAttribute="leading" secondItem="cek-LP-liu" secondAttribute="leading" constant="25" id="vwX-2i-UMf"/>
                 <constraint firstItem="JW6-7X-IK3" firstAttribute="top" secondItem="dcM-Zz-OKM" secondAttribute="bottom" constant="8" id="wO3-g5-6gv"/>
                 <constraint firstItem="qbz-hu-Vfp" firstAttribute="leading" secondItem="cek-LP-liu" secondAttribute="leading" id="zdm-F6-kuN"/>
             </constraints>

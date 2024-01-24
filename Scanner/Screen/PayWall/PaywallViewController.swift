@@ -58,7 +58,7 @@ class PaywallViewController: UIViewController {
         termsOfUseButton.underLine(text: "Term of use")
         privacePolicyButton.underLine(text: "Privacy policy")
         priceLabel.underLine(text: "after $9.99 / week (auto-renewal)")
-        moreInfoLabel.underLine(text: "1240 people have used the 7-day Trial in the past 24 hours")
+        moreInfoLabel.underLine(text: "7 Days Free")
     }
     
     @IBAction func closeAction(_ sender: UIButton){
