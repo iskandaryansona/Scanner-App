@@ -9,6 +9,7 @@ import UIKit
 import GoogleSignIn
 import CoreData
 import YandexMobileMetrica
+import AppTrackingTransparency
 
 var isSubscribed = UserDefaults.standard.bool(forKey: "isSubscribed")
 var yandexMetricaID = "640609218903-mivqemk73799nol36lelp1o4ei2rrr0k.apps.googleusercontent.com"
@@ -32,8 +33,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let configuration = YMMYandexMetricaConfiguration.init(apiKey: "1e7e2873-dd69-4bee-95d2-3e185e274952")
         YMMYandexMetrica.activate(with: configuration!)
+        NotificationCenter.default.addObserver(self, selector: #selector(sendLaunch), name: UIApplication.didBecomeActiveNotification, object: nil)
         
         return true
+    }
+    
+    @objc func sendLaunch() {
+        ATTrackingManager.requestTrackingAuthorization { (status) in
+                switch status {
+                case .denied:
+                    print("AuthorizationSatus is denied")
+                case .notDetermined:
+                    print("AuthorizationSatus is notDetermined")
+                case .restricted:
+                    print("AuthorizationSatus is restricted")
+                case .authorized:
+                    print("AuthorizationSatus is authorized")
+                @unknown default:
+                    fatalError("Invalid authorization status")
+                }
+              }
     }
 
     // MARK: UISceneSession Lifecycle

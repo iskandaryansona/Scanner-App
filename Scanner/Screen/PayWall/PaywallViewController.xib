@@ -82,7 +82,7 @@
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="7 DAYS FREE">
-                        <fontDescription key="titleFontDescription" name="KaiseiOpti-Regular" family="Kaisei Opti" pointSize="18"/>
+                        <fontDescription key="titleFontDescription" name="KaiseiOpti-Regular" family="Kaisei Opti" pointSize="17"/>
                     </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -122,8 +122,8 @@
                     </constraints>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="after $9.99 / week (auto-renewal)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcM-Zz-OKM">
-                    <rect key="frame" x="0.0" y="568" width="393" height="19"/>
-                    <fontDescription key="fontDescription" name="KaiseiOpti-Regular" family="Kaisei Opti" pointSize="13"/>
+                    <rect key="frame" x="0.0" y="562.33333333333337" width="393" height="24.666666666666629"/>
+                    <fontDescription key="fontDescription" name="KaiseiOpti-Regular" family="Kaisei Opti" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
