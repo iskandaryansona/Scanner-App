@@ -89,6 +89,11 @@ extension IAPService: SKProductsRequestDelegate {
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         if let product = response.products.first {
             myProduct = product
+
+           if product.introductoryPrice?.type == .subscription {
+                UserDefaults.standard.setValue(true, forKey: "isSubscribed")
+            }
+            
         }
     }
     

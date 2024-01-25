@@ -32,7 +32,6 @@ class PaywallViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
-        IAPService.shared.getProducts()
         IAPService.shared.delegate = self
     }
     
