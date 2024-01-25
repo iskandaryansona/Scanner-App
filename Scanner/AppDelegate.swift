@@ -22,7 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = GIDConfiguration(clientID: yandexMetricaID)
         
         GIDSignIn.sharedInstance.configuration = config
+        IAPService.shared.getProducts()
         
+        if let product = IAPService.shared.myProduct, product.introductoryPrice?.type == .subscription {
+            UserDefaults.standard.setValue(true, forKey: "isSubscribed")
+        }
         if let receiptURL = Bundle.main.appStoreReceiptURL,
             let receiptData = try? Data(contentsOf: receiptURL) {
             // Verify the receipt data with your server to ensure its validity and check the subscription status.
