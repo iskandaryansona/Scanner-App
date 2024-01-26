@@ -89,10 +89,9 @@ extension IAPService: SKProductsRequestDelegate {
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         if let product = response.products.first {
             myProduct = product
-
-           if product.introductoryPrice?.type == .subscription {
-                UserDefaults.standard.setValue(true, forKey: "isSubscribed")
-            }
+//            if product.introductoryPrice?.type == .subscription {
+//                UserDefaults.standard.setValue(true, forKey: "isSubscribed")
+//            }
             
         }
     }
@@ -106,14 +105,14 @@ extension IAPService: SKPaymentTransactionObserver{
                 break
             case .purchased:
                 SKPaymentQueue.default().finishTransaction(transaction)
-                isSubscribed = true
+                UserDefaults.standard.setValue(true, forKey: "isSubscribed")
                 delegate?.close()
                 handlePurchase(transaction)
             case .failed, .deferred:
                 SKPaymentQueue.default().finishTransaction(transaction)
             case .restored:
                 SKPaymentQueue.default().finishTransaction(transaction)
-                isSubscribed = true
+                UserDefaults.standard.setValue(true, forKey: "isSubscribed")
                 delegate?.close()
             @unknown default:
                 SKPaymentQueue.default().finishTransaction(transaction)

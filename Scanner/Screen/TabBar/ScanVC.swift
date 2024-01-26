@@ -53,7 +53,7 @@ extension ScanVC: UICollectionViewDelegate, UICollectionViewDataSource, UINaviga
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if isSubscribed {
+        if UserDefaults.standard.bool(forKey: "isSubscribed") {
             switch indexPath.item {
             case 0:
                 let vc = CameraViewController()

@@ -24,16 +24,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GIDSignIn.sharedInstance.configuration = config
         IAPService.shared.getProducts()
         
-        if let product = IAPService.shared.myProduct, product.introductoryPrice?.type == .subscription {
-            UserDefaults.standard.setValue(true, forKey: "isSubscribed")
-        }
-        if let receiptURL = Bundle.main.appStoreReceiptURL,
-            let receiptData = try? Data(contentsOf: receiptURL) {
-            // Verify the receipt data with your server to ensure its validity and check the subscription status.
-            // For a real-world application, you would usually use a server for receipt validation.
-            UserDefaults.standard.setValue(true, forKey: "isSubscribed")
-            print("Receipt data: \(receiptData.base64EncodedString())")
-        }
+//        if let product = IAPService.shared.myProduct, product.introductoryPrice?.type == .subscription {
+//            UserDefaults.standard.setValue(true, forKey: "isSubscribed")
+//        }
+//        if let receiptURL = Bundle.main.appStoreReceiptURL,
+//            let receiptData = try? Data(contentsOf: receiptURL) {
+//            // Verify the receipt data with your server to ensure its validity and check the subscription status.
+//            // For a real-world application, you would usually use a server for receipt validation.
+//            UserDefaults.standard.setValue(true, forKey: "isSubscribed")
+//            print("Receipt data: \(receiptData.base64EncodedString())")
+//        }
         
         let configuration = YMMYandexMetricaConfiguration.init(apiKey: "1e7e2873-dd69-4bee-95d2-3e185e274952")
         YMMYandexMetrica.activate(with: configuration!)

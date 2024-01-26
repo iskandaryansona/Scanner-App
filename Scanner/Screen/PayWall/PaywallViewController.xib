@@ -119,7 +119,6 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="341" id="cFc-d6-NVV"/>
                         <constraint firstAttribute="height" constant="25" id="opD-gu-3p7"/>
                     </constraints>
                 </stackView>
@@ -139,12 +138,10 @@
             <viewLayoutGuide key="safeArea" id="cek-LP-liu"/>
             <color key="backgroundColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="aiK-iy-p2A" firstAttribute="leading" secondItem="cek-LP-liu" secondAttribute="leading" constant="25" id="AfA-Dh-glC"/>
                 <constraint firstItem="nkh-kI-IhK" firstAttribute="leading" secondItem="cek-LP-liu" secondAttribute="leading" constant="25" id="F4K-HK-fa5"/>
                 <constraint firstItem="qbz-hu-Vfp" firstAttribute="top" secondItem="JW6-7X-IK3" secondAttribute="bottom" constant="5" id="HNi-SB-qFV"/>
                 <constraint firstAttribute="bottom" secondItem="JW6-7X-IK3" secondAttribute="bottom" constant="201" id="N8w-fe-ez3"/>
                 <constraint firstItem="ODB-QK-61g" firstAttribute="top" secondItem="nkh-kI-IhK" secondAttribute="top" id="NsN-XE-CON"/>
-                <constraint firstItem="cek-LP-liu" firstAttribute="trailing" secondItem="aiK-iy-p2A" secondAttribute="trailing" constant="25" id="WQk-oR-fPk"/>
                 <constraint firstItem="dcM-Zz-OKM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I3l-wd-EDR" secondAttribute="bottom" constant="-15" id="YpE-Q6-Xti"/>
                 <constraint firstItem="cek-LP-liu" firstAttribute="trailing" secondItem="JW6-7X-IK3" secondAttribute="trailing" constant="25" id="Yuy-NJ-htE"/>
                 <constraint firstItem="nkh-kI-IhK" firstAttribute="top" secondItem="cek-LP-liu" secondAttribute="top" id="ZM0-dr-VRq"/>
