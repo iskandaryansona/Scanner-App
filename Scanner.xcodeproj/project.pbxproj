@@ -618,6 +618,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Scanner/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LuxeScan;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera Use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -654,6 +655,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Scanner/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LuxeScan;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera Use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

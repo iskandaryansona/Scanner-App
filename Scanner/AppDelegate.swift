@@ -12,6 +12,7 @@ import YandexMobileMetrica
 import AppTrackingTransparency
 
 var isSubscribed = UserDefaults.standard.bool(forKey: "isSubscribed")
+var transactionID = UserDefaults.standard.string(forKey: "ID")
 var yandexMetricaID = "640609218903-mivqemk73799nol36lelp1o4ei2rrr0k.apps.googleusercontent.com"
 
 @main

@@ -106,6 +106,7 @@ extension IAPService: SKPaymentTransactionObserver{
             case .purchased:
                 SKPaymentQueue.default().finishTransaction(transaction)
                 UserDefaults.standard.setValue(true, forKey: "isSubscribed")
+                UserDefaults.standard.setValue(transaction.transactionIdentifier, forKey: "ID")
                 delegate?.close()
                 handlePurchase(transaction)
             case .failed, .deferred:
@@ -113,6 +114,7 @@ extension IAPService: SKPaymentTransactionObserver{
             case .restored:
                 SKPaymentQueue.default().finishTransaction(transaction)
                 UserDefaults.standard.setValue(true, forKey: "isSubscribed")
+                UserDefaults.standard.setValue(transaction.original?.transactionIdentifier, forKey: "ID")
                 delegate?.close()
             @unknown default:
                 SKPaymentQueue.default().finishTransaction(transaction)
