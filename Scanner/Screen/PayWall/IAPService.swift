@@ -20,7 +20,7 @@ class IAPService: NSObject{
     let paymentQueue = SKPaymentQueue.default()
     var request: SKProductsRequest?
     
-    func getProducts(){
+    func getSKProducts(){
         if SKPaymentQueue.canMakePayments() {
         let productId:Set = ["app.buy.luxe.scanner"]
         let request = SKProductsRequest(productIdentifiers: productId)
@@ -28,6 +28,20 @@ class IAPService: NSObject{
         request.start()
         paymentQueue.add(self)
         }
+    }
+    
+    func getProduts() async {
+        let prod = try? await Product.products(for: ["app.buy.luxe.scanner"])
+        let status = try? await prod?.first?.subscription?.status
+        
+        if status?.last?.state == .subscribed {
+            UserDefaults.standard.setValue(true, forKey: "isSubscribed")
+        } else if status?.last?.state == .expired {
+            UserDefaults.standard.setValue(false, forKey: "isSubscribed")
+        } else {
+            print("nothing")
+        }
+        
     }
     
     func purChase(){
@@ -99,14 +113,13 @@ extension IAPService: SKProductsRequestDelegate {
 }
 extension IAPService: SKPaymentTransactionObserver{
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        for transaction in transactions{
+        for transaction in transactions {
             switch transaction.transactionState{
             case .purchasing:
                 break
             case .purchased:
                 SKPaymentQueue.default().finishTransaction(transaction)
                 UserDefaults.standard.setValue(true, forKey: "isSubscribed")
-                UserDefaults.standard.setValue(transaction.transactionIdentifier, forKey: "ID")
                 delegate?.close()
                 handlePurchase(transaction)
             case .failed, .deferred:
@@ -114,7 +127,6 @@ extension IAPService: SKPaymentTransactionObserver{
             case .restored:
                 SKPaymentQueue.default().finishTransaction(transaction)
                 UserDefaults.standard.setValue(true, forKey: "isSubscribed")
-                UserDefaults.standard.setValue(transaction.original?.transactionIdentifier, forKey: "ID")
                 delegate?.close()
             @unknown default:
                 SKPaymentQueue.default().finishTransaction(transaction)

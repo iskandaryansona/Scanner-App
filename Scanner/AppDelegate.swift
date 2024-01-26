@@ -23,7 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = GIDConfiguration(clientID: yandexMetricaID)
         
         GIDSignIn.sharedInstance.configuration = config
-        IAPService.shared.getProducts()
+        IAPService.shared.getSKProducts()
+        Task {
+            await IAPService.shared.getProduts()
+        }
         
 //        if let product = IAPService.shared.myProduct, product.introductoryPrice?.type == .subscription {
 //            UserDefaults.standard.setValue(true, forKey: "isSubscribed")
